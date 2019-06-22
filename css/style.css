@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 .container {
@@ -131,29 +132,142 @@ header .searchcontainer .search {
  * Home
  */
 
- .home .contentcontainer {
-     margin: 0 4em 2em 4em;
- }
+.home .contentcontainer {
+    margin: 0 4em 2em 4em;
+}
 
- .home img.title {
-     height: 100vh;
-     width: 100vw;
-     position: absolute;
-     top: 0;
-     z-index: -1;
-     object-fit: cover;
- }
+.home img.title {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    object-fit: cover;
+}
 
- .home header {
-     color: white !important;
-     background: linear-gradient(white, transparent);
-     height: 10em;
- }
+.home header {
+    color: white !important;
+    background: linear-gradient(white, transparent);
+    height: 10em;
+}
 
- .sectiontitle {
-     margin-left: 8em;
- }
+.sectiontitle {
+    margin-left: 8em;
+}
 
- .section {
-     margin-left: 4em;
+section {
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+section.smallmargin {
+    margin-left: 2em;
+    margin-right: 0;
+}
+
+.newsgrid {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(4, calc(25% - 2.25em)) 6em;
+}
+
+.newsgrid .box {
+    height: 28em;
+}
+
+.newsgrid .box .imagebg {
+    height: 10em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: -1em -1em 1em -1em;
+}
+
+.newsgrid .box h2 {
+    color: #909090;
+    margin: 0.2em 0;
+    font-size: 1.2em;
+}
+
+.newsgrid .box h1 {
+    margin: 0.4em 0;
+}
+
+.newsgrid .box:nth-child(1),
+.newsgrid .box:nth-child(3) {
+    transform: scale(0.98);
+}
+
+.newsgrid .box.hover:nth-child(1):hover,
+.newsgrid .box.hover:nth-child(3):hover {
+    transform: scale(0.97);
+}
+
+.newsgrid .box.hover:nth-child(2):hover {
+    transform: scale(0.99);
+}
+
+.newsgrid .box:nth-child(4) {
+    transform: scale(0.97);
+}
+
+.newsgrid .box.hover:nth-child(4):hover {
+    transform: scale(0.96);
+}
+
+.newsgrid .box:nth-child(5) {
+    transform: scale(0.95);
+}
+
+.newsgrid .box.hover:nth-child(5):hover {
+    transform: scale(0.94);
+}
+
+
+/*
+  * Boxes
+  */
+
+.box {
+    background-color: white;
+    box-shadow: 0 0 10px #909090;
+    border-radius: 0.25em;
+    padding: 1em;
+    overflow: hidden;
+    transition: 200ms ease-out;
+}
+
+.box.hover:hover {
+    transform: scale(0.98);
+    box-shadow: 0 0 2px #eaeaea;
+}
+
+a .box ** {
+    text-decoration: none;
+}
+
+.box.quickcalendar {
+    
+}
+
+.box.seemore {
+    background-color: #eaeaea;
+}
+
+.box.seemore * {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 300%;
+    text-align: center;
+    writing-mode: vertical-lr;
+}
+
+/*
+ * Buttons
+ */
+
+ button,
+ .button {
+
  }

@@ -3,6 +3,28 @@ layout: home
 ---
 
 <div id="neues">
-    <h1 class="sectiontitle">Neuigkeiten</h1>
-
+    <section class="smallmargin">
+        <div class="newsgrid">
+            <div class="box quickcalendar hover">
+                <!--Fetch from calendar,
+                    use weekdays instead of dates where applicable -->
+                <h1>Anstehend</h1>
+            </div>
+            {% for post in site.posts limit:3 %}
+            <div class="box post hover">
+                {% if post.image != nil %}
+                <div class="imagebg"
+                    style="background-image: linear-gradient(transparent 65%, white), url('{{ post.image }}')">
+                </div>
+                {% endif %}
+                <h2>{{ post.subtitle }}</h2>
+                <h1>{{ post.title }}</h1>
+                <p>{{ post.content | split:". " | first | truncatewords:80 }}.</p>
+            </div>
+            {% endfor %}
+            <div class="box seemore hover">
+                <h2>Zu allen Neuigkeiten</h2>
+            </div>
+        </div>
+    </section>
 </div>
