@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 2em;
+}
+
+.contentcontainer {
+    margin: 7em 4em 2em 4em;
+}
+
+/*
+ * Header
+ */
+
+header {
+    border-top: 3px solid #004070;
+    overflow: hidden;
+    height: 7em;
+}
+
+@media (min-width: 1250px) {
+    header {
+        padding: 2em 4em 0 4em;
+    }
+}
+
+header .logo {
+    height: 5em;
+    padding: 1em 1em 0 1em;
+    position: absolute;
+    left: calc(50% - 4em);
+}
+
+header .logo img {
+    width: 5em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+header .navigation {
+    list-style-type: none;
+    position: absolute;
+    right: calc(50% + 4em);
+}
+
+ul.navigation li {
+    float: left;
+    padding: 1em;
+    height: 5em;
+    display: table;
+}
+
+ul.navigation li a {
+    color: #202020;
+    font-size: 1.25em;
+    text-decoration: none;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+ul.navigation li:hover>a,
+ul.navigation li.active>a {
+    text-decoration: underline;
+}
+
+ul.navigation li.inactive>a {
+    color: #909090;
+}
+
+ul.sub-navigation {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    left: 0;
+    top: 80px;
+    visibility: hidden;
+}
+
+@media (min-width: 1250px) {
+    ul.sub-navigation {
+        position: absolute;
+    }
+}
+
+ul.sub-navigation li {
+    font-size: 0.9em;
+}
+
+ul.sub-navigation li a {
+    color: #909090;
+    text-decoration: none;
+}
+
+li:hover ul.sub-navigation,
+li.active ul.sub-navigation {
+    visibility: visible;
+}
+
+ul.sub-navigation li:hover a {
+    color: #202020;
+    text-decoration: none;
+}
+
+header .searchcontainer {
+    height: 6em;
+    position: absolute;
+    left: calc(50% + 4em);
+}
+
+header .searchcontainer .search {
+    height: 2em;
+    width: 20em;
+    float: right;
+    font-size: 1.25em;
+    padding: 0.5em;
+    margin: 1.85em 0 2.15em 0;
+    border-radius: 0.25em;
+    border: 1px solid #202020;
+    display: table-cell;
+    vertical-align: middle;
+    background-color: transparent;
+}
+
+/*
+ * Home
+ */
+
+ .home .contentcontainer {
+     margin: 0 4em 2em 4em;
+ }
+
+ .home img.title {
+     height: 100vh;
+     width: 100vw;
+     position: absolute;
+     top: 0;
+     z-index: -1;
+     object-fit: cover;
+ }
+
+ .home header {
+     color: white !important;
+     background: linear-gradient(white, transparent);
+     height: 10em;
+ }
+
+ .sectiontitle {
+     margin-left: 8em;
+ }
+
+ .section {
+     margin-left: 4em;
+ }
