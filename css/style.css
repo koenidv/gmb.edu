@@ -141,8 +141,17 @@ header .searchcontainer .search {
     width: 100vw;
     position: absolute;
     top: 0;
-    z-index: -1;
+    z-index: -100;
     object-fit: cover;
+}
+
+.title_img_overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    z-index: -99;
+    background: linear-gradient(transparent 80%, white);
 }
 
 .home header {
@@ -155,7 +164,7 @@ header .searchcontainer .search {
     margin-left: 8em;
 }
 
-section {
+:not(.box) section {
     margin-left: 4em;
     margin-right: 4em;
 }
@@ -168,7 +177,7 @@ section.smallmargin {
 .newsgrid {
     display: grid;
     grid-gap: 1em;
-    grid-template-columns: repeat(4, calc(25% - 2.25em)) 6em;
+    grid-template-columns: repeat(4, calc(25% - 2.25em)) 5em;
 }
 
 .newsgrid .box {
@@ -192,34 +201,46 @@ section.smallmargin {
     margin: 0.4em 0;
 }
 
-.newsgrid .box:nth-child(1),
-.newsgrid .box:nth-child(3) {
-    transform: scale(0.98);
+@media (min-width: 1250px) {
+
+    .newsgrid .box:nth-child(1),
+    .newsgrid .box:nth-child(3) {
+        transform: scale(1);
+    }
+
+    .newsgrid .box.hover:nth-child(1):hover,
+    .newsgrid .box.hover:nth-child(3):hover {
+        transform: scale(0.99);
+    }
+
+    .newsgrid .box:nth-child(2) {
+        transform: scale(1.02)
+    }
+
+    .newsgrid .box.hover:nth-child(2):hover {
+        transform: scale(1.01);
+    }
+
+    .newsgrid .box:nth-child(4) {
+        transform: scale(0.99);
+    }
+
+    .newsgrid .box.hover:nth-child(4):hover {
+        transform: scale(0.98);
+    }
+
+    .newsgrid .box:nth-child(5) {
+        transform: scale(0.97);
+    }
+
+    .newsgrid .box.hover:nth-child(5):hover {
+        transform: scale(0.96);
+    }
 }
 
-.newsgrid .box.hover:nth-child(1):hover,
-.newsgrid .box.hover:nth-child(3):hover {
-    transform: scale(0.97);
-}
-
-.newsgrid .box.hover:nth-child(2):hover {
-    transform: scale(0.99);
-}
-
-.newsgrid .box:nth-child(4) {
-    transform: scale(0.97);
-}
-
-.newsgrid .box.hover:nth-child(4):hover {
-    transform: scale(0.96);
-}
-
-.newsgrid .box:nth-child(5) {
-    transform: scale(0.95);
-}
-
-.newsgrid .box.hover:nth-child(5):hover {
-    transform: scale(0.94);
+#about {
+    margin-top: 6em;
+    min-height: 100vh;
 }
 
 
@@ -230,7 +251,7 @@ section.smallmargin {
 .box {
     background-color: white;
     box-shadow: 0 0 10px #909090;
-    border-radius: 0.25em;
+    border-radius: 0.35em;
     padding: 1em;
     overflow: hidden;
     transition: 200ms ease-out;
@@ -245,9 +266,7 @@ a .box ** {
     text-decoration: none;
 }
 
-.box.quickcalendar {
-    
-}
+.box.quickcalendar {}
 
 .box.seemore {
     background-color: #eaeaea;
@@ -267,7 +286,5 @@ a .box ** {
  * Buttons
  */
 
- button,
- .button {
-
- }
+button,
+.button {}

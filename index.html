@@ -11,20 +11,32 @@ layout: home
                 <h1>Anstehend</h1>
             </div>
             {% for post in site.posts limit:3 %}
-            <div class="box post hover">
-                {% if post.image != nil %}
-                <div class="imagebg"
-                    style="background-image: linear-gradient(transparent 65%, white), url('{{ post.image }}')">
+            <a href="{{ post.url }}">
+                <div class="box post hover">
+                    {% if post.image != nil %}
+                    <div class="imagebg"
+                        style="background-image: linear-gradient(transparent 65%, white), url('{{ post.image }}')">
+                    </div>
+                    {% endif %}
+                    <h2>{{ post.subtitle }}</h2>
+                    <h1>{{ post.title }}</h1>
+                    <p>{{ post.content | split:". " | first | truncatewords:80 }}.</p>
                 </div>
-                {% endif %}
-                <h2>{{ post.subtitle }}</h2>
-                <h1>{{ post.title }}</h1>
-                <p>{{ post.content | split:". " | first | truncatewords:80 }}.</p>
-            </div>
+            </a>
             {% endfor %}
             <div class="box seemore hover">
                 <h2>Zu allen Neuigkeiten</h2>
             </div>
         </div>
     </section>
+    <section id="about" class="box smallmargin">
+        <section>
+            <h1>Unsere Schule</h1>
+        </section>
+        <section>
+            <h1>Was andere denken</h1>
+        </section>
+        <section>
+            <h1>Kontaktiere uns</h1>
+        </section>
 </div>
