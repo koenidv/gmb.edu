@@ -4,22 +4,32 @@ hide_body: true
 fields:
 - type: text
   name: prefix
-  label: prefix
+  label: Prefix
+  description: Hr. / Fr.
 - type: text
   name: firstname
-  label: firstname
+  label: Vorname
+  description: Z.B. A.
 - type: text
   name: lastname
-  label: lastname
+  label: Nachname
+  description: Z.B. Manig
 - type: textarea
   name: subjects
-  label: subjects
+  label: Unterrichtete Fächer
+  description: Leerzeichen durch "+" ersetzen
 - type: text
   name: duty
-  label: duty
+  label: Weitere Aufgaben
+  description: Fachschaftssprecher, Personalrat, etc.
 - type: text
   name: time
-  label: time
+  label: Sprechstundenzeit
+  description: Z.B. Montag, 4te Stunde
+  config:
+    required: false
 - type: text
   name: email
-  label: email
+  label: E-Mail-Adresse
+  description: Leer lassen, wenn keine angezeigt werden soll (in Absprache mit dem:der
+    Lehrer:in)
