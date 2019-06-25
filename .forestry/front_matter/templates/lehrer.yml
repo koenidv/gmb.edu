@@ -2,10 +2,22 @@
 label: Lehrer
 hide_body: false
 fields:
-- type: text
-  name: prefix
+- name: prefix
+  type: select
+  default: Hr.
+  config:
+    required: true
+    options:
+    - Hr.
+    - Fr.
+    - Hr. Dr.
+    - Fr. Dr.
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
   label: Prefix
-  description: Hr. / Fr.
 - type: text
   name: firstname
   label: Vorname
