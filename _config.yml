@@ -23,6 +23,23 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "koenidv.github.com/gmb.edu" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  koenidv
 
+
+permalink: /aktuelles/:title
+
+collections:
+  teachers:
+    output: true
+    permalink: /lehrer/:title
+
+
+defaults:
+  - scope:
+      path: ""
+      type: "teachers"
+    values:
+      layout: "teacher"
+
+
 # Build settings
 markdown: kramdown
 remote_theme: koenidv/gmb.edu

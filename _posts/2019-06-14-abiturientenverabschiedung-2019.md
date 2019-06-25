@@ -1,8 +1,8 @@
 ---
-layout: main
+layout: post
 title: "Verabschiedung der Abiturient:innen 2019"
 subtitle: Verantwortungsbewusst und überaus pragmatisch
-permalink: /abitur19
+slug: abitur19
 tags: Abitur Abschied
 image: /assets/bg.jpg
 ---
@@ -11,9 +11,8 @@ Am Donnerstag, den 13. Juni 2019, wurde unser diesjähriger Abiturjahrgang - bes
 
 Frau Manig ging in ihrer Ansprache auf das diesjährige Abimotto: "Amtlich bestätigte Inkompetenz" ein, mit dem die Abiturient*innen ihre sarkastische Kritik am Bildungswesen zum Ausdruck bringen wollten. Frau Manig griff einerseits die darin enthaltenen Anfragen an der Institution Schule auf, äußerte Verständnis für den als übergroß empfundenen Erwartungsdruck gegenüber der jungen Generation und machte deutlich, dass sich das gewählte Motto überhöhten Ansprüchen entgegenstelle. Andererseits stellte sie aber auch heraus, dass der Abijahrgang aus ihrer Sicht keinen Grund zur Mutlosigkeit oder Resignation habe, auch da sie den Jahrgang insgesamt als „verantwortungsbewusst und überaus pragmatisch“ erlebt habe. Viele Schüler*innen des Jahrgangs hätten sich engagiert in die Schulgemeinde eingebracht, etwa beim High School Musical, dem Chor oder den Schulsanitätern und hierbei wichtige Kompetenzen für das spätere Leben erworben.
 
-
 Großartige Leistungen mit einem Abiturdurchschnitt von 1,0 haben in diesem Jahr Lena Magel und Luis Filsinger erbracht. Zwei Schüler*innen konnten dieses Jahr mit dem international anerkannten Exzellenzlabel Certi Lingua ausgezeichnet werden: Janina Kreth und Linnea Stein. Es konnten des Weiteren mehrere Schüler*innen von ihren TutorInnen als "Preisträger/innen für hervorragende Leistungen in Mathematik und den Naturwissenschaften  sowie in Deutsch ausgezeichnet werden:
-Biologie	
+Biologie
 - Gabriele Bogacz
 - Cosima Wintermeyer
 Chemie	

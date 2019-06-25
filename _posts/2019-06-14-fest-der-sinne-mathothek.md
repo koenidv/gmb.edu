@@ -1,8 +1,8 @@
 ---
-layout: main
+layout: post
 title: "Fest der Sinne: Mathothek mit einer Auswahl an Exponaten dabei"
 subtitle: "50 Jahre GMB: Fest der Sinne!"
-permalink: /festdersinne-mathothek
+slug: festdersinne-mathothek
 tags: Sinnesfest Jubiläum Mathothek
 image:
 ---

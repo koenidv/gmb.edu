@@ -1,8 +1,8 @@
 ---
-layout: main
+layout: post
 title: Fest der Sinne - ein voller Erfolg!
 subtitle: GMB auf die sinnliche Tour
-permalink: /festdersinne
+slug: festdersinne
 tags: Sinnesfest Jubiläum
 image: /assets/bg.jpg
 ---
