@@ -71,3 +71,5 @@ fields:
   label: E-Mail-Adresse
   description: Leer lassen, wenn keine angezeigt werden soll (in Absprache mit dem:der
     Lehrer:in)
+pages:
+- _teachers/aweidauer.md
