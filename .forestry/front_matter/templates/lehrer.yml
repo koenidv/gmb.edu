@@ -1,0 +1,25 @@
+---
+label: Lehrer
+hide_body: true
+fields:
+- type: text
+  name: prefix
+  label: prefix
+- type: text
+  name: firstname
+  label: firstname
+- type: text
+  name: lastname
+  label: lastname
+- type: textarea
+  name: subjects
+  label: subjects
+- type: text
+  name: duty
+  label: duty
+- type: text
+  name: time
+  label: time
+- type: text
+  name: email
+  label: email
