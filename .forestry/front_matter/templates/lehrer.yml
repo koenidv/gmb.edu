@@ -14,10 +14,36 @@ fields:
   name: lastname
   label: Nachname
   description: Z.B. Manig
-- type: textarea
-  name: subjects
+- name: subjects
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: simple
+    options:
+    - Mathematik
+    - Deutsch
+    - Englisch
+    - Latein
+    - Französisch
+    - Spanisch
+    - Physik
+    - Chemie
+    - Biologie
+    - Informatik
+    - Bilingualer Fachunterricht
+    - Geschichte
+    - Politik und Wirtschaft
+    - Ethik
+    - Religion
+    - Erdkunde
+    - Kunst
+    - Musik
+    - Darstellendes Spiel
+    - Sport
   label: Unterrichtete Fächer
-  description: Leerzeichen durch "+" ersetzen
 - type: text
   name: duty
   label: Weitere Aufgaben
