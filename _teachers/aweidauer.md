@@ -9,7 +9,6 @@ subjects:
 duty: ''
 time: Donnerstag, 2te Stunde
 email: ''
-published: false
 
 ---
 Das ist eine Beschriftung.
