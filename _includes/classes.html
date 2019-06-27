@@ -1,0 +1,38 @@
+<table class="classes" id="classes">
+    <tr class="title">
+        <td>Bild</td>
+        <td>Klasse</td>
+        <td>Lehrer</td>
+        <td>Klassensprecher</td>
+        <td>Klassenraum</td>
+    </tr>
+    {% for class in site.classes | sort: "level" %}
+    <tr>
+        <td class="imgtd">{% if class.img %}
+            <img src="{{ class.img }}" alt="Klassenfoto der Klasse {{ class.name }}">
+            {% endif %}
+        </td>
+        <td>
+            {{ class.name }}
+        </td>
+        <td>{% for teacherId in class.teacherIds %}
+            <a href="/personen/lehrer/{{ teacherId }}">
+                {% assign id = teacherId | capitalize %}
+                {% assign teacherPage = site.teachers | where: "title", id %}
+                {% for thisTeacher in teacherPage %}
+                {{ thisTeacher.prefix }} {{ thisTeacher.lastname }}
+                {% endfor %}
+                
+                {% if teacherPage.size == 0 %}
+                {{ teacherId }}
+                {% endif %}
+
+                </a>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}</td>
+        <td>{% for studentRep in class.studentReps %}
+                    {{ studentRep }}{% unless forloop.last %}, {% endunless %}
+                {% endfor %}</td>
+        <td>{{ class.room }}</td>
+    </tr>
+    {% endfor %}
+</table>

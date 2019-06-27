@@ -1,0 +1,63 @@
+---
+layout: default
+tags: Lehrer Sprechstunden
+---
+
+<div class="sidebar">
+    <div class="sidebar">
+        <h3 class="sub">Lehrer & Sprechstunden</h3>
+        <ul class="simple">
+            <h4>Verknüpft</h4>
+            <li><a href="/personen/sv">
+                Schülervertretung
+            </a></li>
+            <li><a href="/personen">
+                    Personen
+                </a></li>
+            <li><a href="/personen/schulleitung">
+                    Schulleitung
+                </a></li>
+        </ul>
+        {% include similiar.html %}
+    </div>
+</div>
+
+<div class="content">
+    <h2 style="float: left">Schulklassen am Mosbacher Berg</h2><input type="search" class="search inline"
+        id="classesSearch" onkeyup="search()" placeholder="Suchen..." title="Suchen Sie nach einem Lehrer."></h2>
+    {% include classes.html %}
+</div>
+
+<script>
+    function search() {
+        var input, filter, table, tr, tdname, tdteachers, tdreps, tdroom, i, txtName, txtTeachers, txtReps, txtRoom;
+        input = document.getElementById("classesSearch");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("classes");
+        tr = table.getElementsByTagName("tr");
+        for (i = 1; i < tr.length; i++) {
+            tdname = tr[i].getElementsByTagName("td")[1];
+            tdteachers = tr[i].getElementsByTagName("td")[2];
+            tdreps = tr[i].getElementsByTagName("td")[3];
+            tdroom = tr[i].getElementsByTagName("td")[4];
+            if (tdname) {
+                txtName = tdname.textContent || tdname.innerText;
+                txtTeachers
+                    = tdteachers.textContent || tdteachers.innerText;
+                txtReps
+                    = tdreps.textContent || tdreps.innerText;
+                txtRoom = tdroom.textContent || tdroom.innerText;
+                if (txtName.toUpperCase().indexOf(filter) > -1
+                    || txtTeachers
+                        .toUpperCase().indexOf(filter) > -1
+                    || txtReps
+                        .toUpperCase().indexOf(filter) > -1
+                    || txtRoom.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>

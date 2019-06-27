@@ -29,7 +29,9 @@ permalink: /aktuelles/:title
 collections:
   teachers:
     output: true
-    permalink: /lehrer/:title
+    permalink: /personen/lehrer/:title
+  classes:
+    output: false
 
 
 defaults:

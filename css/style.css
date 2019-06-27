@@ -310,6 +310,16 @@ ul.similiar li {
     margin-top: 0.8em;
 }
 
+table img {
+    height: 20em;
+    width: 30em;
+    object-fit: cover;
+}
+
+table .imgtd {
+    width: 32em;
+}
+
 img.intext {
     float: right;
     height: 22em;
