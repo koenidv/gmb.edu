@@ -2,8 +2,13 @@
 prefix: Hr.
 firstname: F.
 lastname: Rüffel
-subjects: Mathematik, Erdkunde
-duty: Fachschaftssprecher, Personalrat
-time: Montag, 5te Stunde
+subjects:
+- Mathematik
+- Erdkunde
+duty:
+- Fachschaftssprecher
+- Personalrat
+time: Montag, 5. Stunde
+room:
 email: f.rueffel@mosbacher-berg.de
 ---

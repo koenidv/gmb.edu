@@ -1,0 +1,71 @@
+---
+layout: default
+tags: Lehrer Sprechstunden
+---
+
+<div class="sidebar">
+    <div class="sidebar">
+        <h3 class="sub">Lehrer & Sprechstunden</h3>
+        <ul class="simple">
+            <h4>Verknüpft</h4>
+            <li><a href="/personen">
+                    Personen
+                </a></li>
+            <li><a href="/personen/schulleitung">
+                    Schulleitung
+                </a></li>
+            <li><a href="/personen/sv">
+                    Schülervertretung
+                </a></li>
+            <li><a href="/personen/lehrer">
+                    Lehrer & Sprechstunden
+                </a></li>
+            <li><a href="/personen/klassen">
+                    Klassen
+                </a></li>
+            <li><a href="/personen/förderverein">
+                    Förderverein
+                </a></li>
+        </ul>
+        {% include similiar.html %}
+    </div>
+</div>
+
+<div class="content">
+        <h2 style="float: left">Kolleginnen und Kollegen am Mosbacher Berg</h2><input type="search" class="search inline"
+            id="teacherSearch" onkeyup="search()" placeholder="Suchen..." title="Suchen Sie nach einem Lehrer."></h2>
+    {% include teachers.html %}
+</div>
+
+<script>
+    function search() {
+        var input, filter, table, tr, tdname, tdsubjects, tdtime, tdroom, tdmail, i, txtName, txtSubjects, txtTime, txtRoom, txtMail;
+        input = document.getElementById("teacherSearch");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("teachers");
+        tr = table.getElementsByTagName("tr");
+        for (i = 1; i < tr.length; i++) {
+            tdname = tr[i].getElementsByTagName("td")[0];
+            tdsubjects = tr[i].getElementsByTagName("td")[1];
+            tdtime = tr[i].getElementsByTagName("td")[2];
+            tdroom = tr[i].getElementsByTagName("td")[3];
+            tdmail = tr[i].getElementsByTagName("td")[4];
+            if (tdname) {
+                txtName = tdname.textContent || tdname.innerText;
+                txtSubjects = tdsubjects.textContent || tdsubjects.innerText;
+                txtTime = tdtime.textContent || tdtime.innerText;
+                txtRoom = tdroom.textContent || tdroom.innerText;
+                txtMail = tdmail.textContent || tdmail.innerText;
+                if (txtName.toUpperCase().indexOf(filter) > -1
+                    || txtSubjects.toUpperCase().indexOf(filter) > -1
+                    || txtTime.toUpperCase().indexOf(filter) > -1
+                    || txtRoom.toUpperCase().indexOf(filter) > -1
+                    || txtMail.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>

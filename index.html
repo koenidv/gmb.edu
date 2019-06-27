@@ -11,22 +11,20 @@ layout: home
                 <h1>Anstehend</h1>
             </div>
             {% for post in site.posts limit:3 %}
-            <a href="{{ post.url }}">
-                <div class="box post hover">
-                    {% if post.image != nil %}
-                    <div class="imagebg"
-                        style="background-image: linear-gradient(transparent 65%, white), url('{{ post.image }}')">
-                    </div>
-                    {% endif %}
-                    <h2>{{ post.subtitle }}</h2>
-                    <h1>{{ post.title }}</h1>
-                    <p>{{ post.content | split:". " | first | truncatewords:80 }}.</p>
+            <a href="{{ post.url }}" class="box post hover">
+                {% if post.image != nil %}
+                <div class="imagebg"
+                    style="background-image: linear-gradient(transparent 65%, white), url('{{ post.image }}')">
                 </div>
+                {% endif %}
+                <h2>{{ post.subtitle }}</h2>
+                <h1>{{ post.title }}</h1>
+                <p>{{ post.content | split:". " | first | truncatewords:80 }}.</p>
             </a>
             {% endfor %}
-            <div class="box seemore hover">
+            <a href="/aktuelles" class="box seemore hover">
                 <h2>Zu allen Neuigkeiten</h2>
-            </div>
+            </a>
         </div>
     </section>
     <section id="about" class="box smallmargin">
@@ -35,8 +33,45 @@ layout: home
         </section>
         <section>
             <h1>Was andere denken</h1>
+
+
+            <div id="voicesCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="box carousel-item active" data-interval="10000">
+
+                    </div>
+                    <div class="box carousel-item" data-interval="10000">
+
+                    </div>
+                    <div class="box carousel-item" data-interval="10000">
+
+                    </div>
+                    <div class="box carousel-item" data-interval="10000">
+
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            
         </section>
         <section>
             <h1>Kontaktiere uns</h1>
+            <div class="twogrid">
+                <form class="box">
+                    <input>
+                    <input>
+                </form>
+                <form class="box">
+                    <input>
+                    <input>
+                </form>
         </section>
+    </section>
 </div>

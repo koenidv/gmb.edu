@@ -7,8 +7,8 @@ subjects:
 - Geschichte
 - Bilingualer Fachunterricht
 duty: ''
-time: Donnerstag, 2te Stunde
+time: Donnerstag, 2. Stunde
+room:
 email: ''
-
 ---
 Das ist eine Beschriftung.

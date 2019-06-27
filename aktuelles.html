@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="sidebargrid">
+    <div class="sidebar">
+
+    </div>
+    <div class="posts">
+        <ul>
+            {% for post in site.posts %}
+            <li>
+                <a href="{{ post.url }}" class="box hover">
+                    {{ post.title }}
+                </a><br />
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

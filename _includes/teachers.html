@@ -1,0 +1,45 @@
+<table class="teachers" id="teachers">
+    <tr class="title">
+        <td>Name</td>
+        <td>Fächer</td>
+        <td>Sprechzeit</td>
+        <td>Raum</td>
+        <td>Kontakt</td>
+    </tr>
+    {% for teacher in site.teachers | sort: "lastname" %}
+    <tr>
+        <td>{{ teacher.prefix }} {{ teacher.lastname }}
+            {% if teacher.duty %}
+            <br>
+            {% for thisduty in teacher.duty %}
+            <a href="/personen/{{ duty }}">
+                {{ thisduty }}</a>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+            {% endif %}
+        </td>
+        <td>
+            {% for subject in teacher.subjects %}
+            <a href="/fächer/{{ subject }}">
+                {{ subject }}</a>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+        </td>
+        <td>{% if teacher.time %}
+                {{ teacher.time }}
+            {% else %}
+                -
+            {% endif %}</td>
+        <td>{% if teacher.room %}
+                {{ teacher.room }}
+            {% else %}
+                {% if teacher.time %}
+                    ?
+                {% else %}
+                    -
+                {% endif %}
+            {% endif %}</td>
+        <td>{% if teacher.email %}
+                {{ teacher.email }}
+            {% endif %}</td>
+    </tr>
+    {% endfor %}
+</table>
