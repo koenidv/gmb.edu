@@ -4,27 +4,26 @@ tags: Lehrer Sprechstunden
 ---
 
 <div class="sidebar">
-    <div class="sidebar">
-        <h3 class="sub">Lehrer & Sprechstunden</h3>
-        <ul class="simple">
-            <h4>Verknüpft</h4>
-            <li><a href="/personen/sv">
+    <h3 class="sub">Klassenliste</h3>
+    <ul class="simple">
+        <h4>Verknüpft</h4>
+        <li><a href="/personen/sv">
                 Schülervertretung
             </a></li>
-            <li><a href="/personen">
-                    Personen
-                </a></li>
-            <li><a href="/personen/schulleitung">
-                    Schulleitung
-                </a></li>
-        </ul>
-        {% include similiar.html %}
-    </div>
+        <li><a href="/personen">
+                Personen
+            </a></li>
+        <li><a href="/personen/schulleitung">
+                Schulleitung
+            </a></li>
+    </ul>
+    {% include similiar.html %}
 </div>
 
 <div class="content">
-    <h2 style="float: left">Schulklassen am Mosbacher Berg</h2><input type="search" class="search inline"
-        id="classesSearch" onkeyup="search()" placeholder="Suchen..." title="Suchen Sie nach einem Lehrer."></h2>
+    <h2 style="float: left">Schulklassen am Mosbacher Berg</h2>
+    <input type="search" class="search inline" id="classesSearch" onkeyup="search()" placeholder="Suchen..."
+        title="Suchen Sie nach einem Lehrer.">
     {% include classes.html %}
 </div>
 

@@ -4,36 +4,35 @@ tags: Lehrer Sprechstunden
 ---
 
 <div class="sidebar">
-    <div class="sidebar">
-        <h3 class="sub">Lehrer & Sprechstunden</h3>
-        <ul class="simple">
-            <h4>Verknüpft</h4>
-            <li><a href="/personen">
-                    Personen
-                </a></li>
-            <li><a href="/personen/schulleitung">
-                    Schulleitung
-                </a></li>
-            <li><a href="/personen/sv">
-                    Schülervertretung
-                </a></li>
-            <li><a href="/personen/lehrer">
-                    Lehrer & Sprechstunden
-                </a></li>
-            <li><a href="/personen/schueler">
-                    Klassen
-                </a></li>
-            <li><a href="/personen/förderverein">
-                    Förderverein
-                </a></li>
-        </ul>
-        {% include similiar.html %}
-    </div>
+    <h3 class="sub">Lehrer & Sprechstunden</h3>
+    <ul class="simple">
+        <h4>Verknüpft</h4>
+        <li><a href="/personen">
+                Personen
+            </a></li>
+        <li><a href="/personen/schulleitung">
+                Schulleitung
+            </a></li>
+        <li><a href="/personen/sv">
+                Schülervertretung
+            </a></li>
+        <li><a href="/personen/lehrer">
+                Lehrer & Sprechstunden
+            </a></li>
+        <li><a href="/personen/schueler">
+                Klassen
+            </a></li>
+        <li><a href="/personen/förderverein">
+                Förderverein
+            </a></li>
+    </ul>
+    {% include similiar.html %}
 </div>
 
 <div class="content">
-        <h2 style="float: left">Kolleginnen und Kollegen am Mosbacher Berg</h2><input type="search" class="search inline"
-            id="teacherSearch" onkeyup="search()" placeholder="Suchen..." title="Suchen Sie nach einem Lehrer."></h2>
+    <h2 style="float: left">Kolleginnen und Kollegen am Mosbacher Berg</h2>
+    <input type="search" class="search inline" id="teacherSearch" onkeyup="search()" placeholder="Suchen..."
+        title="Suchen Sie nach einem Lehrer.">
     {% include teachers.html %}
 </div>
 

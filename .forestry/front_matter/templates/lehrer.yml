@@ -63,7 +63,7 @@ fields:
 - type: text
   name: time
   label: Sprechstundenzeit
-  description: Z.B. Montag, 4te Stunde
+  description: Z.B. Montag, 4. Stunde
   config:
     required: false
 - type: text

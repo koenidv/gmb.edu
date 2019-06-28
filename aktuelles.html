@@ -1,20 +1,43 @@
 ---
 layout: default
+title: Aktuelles
 ---
 
-<div class="sidebargrid">
-    <div class="sidebar">
+<div class="sidebar">
+    <h3 class="sub">Neues vom GMB</h3>
+    <ul class="simple">
+        <h4>Verknüpft</h4>
+        <li><a href="/kalender">
+                Kalender
+            </a></li>
+        <li><a href="/impressionen">
+                Impressionen
+            </a></li>
+        <li><a href="/zeitung">
+                Schülerzeitung
+            </a></li>
+    </ul>
+    <ul class="simple">
+        <h4>Themen</h4>
+        {% for tag in site.tags %}
+        <li><a href="aktuelles/tag/{{ tag | first }}">
+                {{ tag | first }}
+            </a></li>
+        {% endfor %}
+    </ul>
+</div>
 
-    </div>
-    <div class="posts">
-        <ul>
-            {% for post in site.posts %}
-            <li>
-                <a href="{{ post.url }}" class="box hover">
-                    {{ post.title }}
-                </a><br />
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
+<div class="content">
+    <h2>Neuigkeiten vom GMB</h2>
+    {% for post in site.posts %}
+    <a href="{{ post.url }}" class="nostyle">
+        <div class="box hover">
+            <h4 class="sub">{{ post.subtitle }}</h4>
+            <h3>{{ post.title }}</h3>
+            <p>
+                {{ post.content | split: "<!--break-->" | first }}
+            </p>
+        </div>
+    </a><br>
+    {% endfor %}
 </div>

@@ -10,5 +10,5 @@ duty:
 - Personalrat
 time: Montag, 5. Stunde
 room:
-email: f.rueffel@mosbacher-berg.de
+email: f.rueffel@gmb.edu
 ---

@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<div class="sidebar">
+    <h3 class="sub">Kalender</h3>
+    <ul class="simple">
+        <h4>Verknüpft</h4>
+        <li><a href="/aktuelles">
+                Neuigkeiten
+            </a></li>
+        <li><a href="/personen/lehrer">
+                Sprechstunden
+            </a></li>
+        <li><a href="/betreuung">
+                Betreuung
+            </a></li>
+        <li><a href="/unterricht/fahrten">
+                Fahrten
+            </a></li>
+    </ul>
+    {% include similiar.html %}
+</div>
+
+<div class="content">
+    <div id='calendar'></div>
+</div>
+
+<link href='https://unpkg.com/@fullcalendar/core@4.2.0/main.min.css' rel='stylesheet' />
+<link href='https://unpkg.com/@fullcalendar/daygrid@4.2.0/main.min.css' rel='stylesheet' />
+<link href='https://unpkg.com/@fullcalendar/list@4.2.0/main.min.css' rel='stylesheet' />
+
+<script src='https://unpkg.com/@fullcalendar/core@4.2.0/main.min.js'></script>
+<script src='https://unpkg.com/@fullcalendar/daygrid@4.2.0/main.min.js'></script>
+<script src='https://unpkg.com/@fullcalendar/list@4.2.0/main.min.js'></script>
+<script src='https://unpkg.com/@fullcalendar/google-calendar@4.2.0/main.min.js'></script>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            plugins: ['dayGrid', 'list', 'googleCalendar'],
+            googleCalendarApiKey: 'AIzaSyAMmQno7NMxkVrWvclSakiOM3pIpHm-dj4',
+            events: {
+                googleCalendarId: 'avk5n0p4fbtm48ev87dq3rn6km8qg7t8@import.calendar.google.com',
+                className: 'gcal-event'
+            },
+            defaultView: 'listWeek',
+            locale: "de"
+        });
+
+        calendar.render();
+    });
+
+</script>

@@ -2,6 +2,50 @@
 layout: default
 ---
 
-<h1>{{ page.prefix }} {{ page.lastname }}</h1>
+<div class="sidebar">
+    <h3 class="sub">Lehrer{% if page.prefix contains "Fr" %}in{% endif %}</h3>
+    <a href="/personen/lehrer">Zur Lehrerübersicht</a><br>
+    <a href="/personen">Personen am GMB</a>
+    {% for subject in page.subjects %}
+    <ul class="simple smallmargin">
+        {% assign subjectTeachers = site.teachers | where: "subjects", subject %}
+        {% if subjectTeachers.size > 1 %}
+        <h5>Weitere {{ subject }}lehrer</h5>
+        {% for subjectTeacher in subjectTeachers %}
+        {% unless subjectTeacher.title == page.title %}
+        <li><a href="/personen/lehrer/{{ subjectTeacher.title | downcase }}">
+                {{ subjectTeacher.prefix }} {{ subjectTeacher.lastname }}
+            </a></li>
+        {% endunless%}
+        {% endfor %}
+        {% endif %}
+    </ul>
+    {% endfor %}
+</div>
 
-{{ page.content }}
+<div class="content">
+    <h1 class="{% if page.duty.size > 0 %}float{% endif %}">{{ page.prefix }} {{ page.lastname }}</h1>
+    <h2 class="sub highline-1">{% for duty in page.duty %},
+        {{ duty }}{% if page.prefix contains "Fr" %}in{% endif %}{% endfor %}</h2>
+    <h4>Unterrichtet:
+        {% for subject in page.subjects %}
+        <a href="/unterricht/faecher/{{ subject | downcase }}">
+            {{ subject }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+    </h4>
+    <h4>Sprechstunde: <span>{{ page.time }}
+            {% if page.room %}
+            in {{ page.room}}
+            {% endif %}
+        </span></h4>
+    {% if page.email.size > 0 %}
+    <h4>Kontakt:
+        <a href="mailto:{{ page.email }}">
+            {{ page.email }}
+        </a></h4>
+    {% endif %}
+    {% if page.content.size > 1 %}
+    <hr>
+    {{ page.content }}
+    {% endif %}
+</div>

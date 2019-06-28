@@ -10,6 +10,6 @@ duty:
 - Schulleiter
 - Fachschaftssprecher
 time: Montag, 4. Stunde
-room:
-email: a.manig@mosbacher-berg.de
+room: AB14
+email: a.manig@gmb.edu
 ---

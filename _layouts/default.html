@@ -3,12 +3,12 @@
 
 {% include head.html %}
 
-<body>
+<body class="{{ page.title }}">
 
     {% include navigation.html %}
 
     <div class="sidebargrid">
-        {{ content }}
+        {{ content | markdownify }}
     </div>
 
 </body>

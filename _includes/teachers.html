@@ -19,7 +19,7 @@
         </td>
         <td>
             {% for subject in teacher.subjects %}
-            <a href="/fächer/{{ subject }}">
+            <a href="/unterricht/fächer/{{ subject | downcase }}">
                 {{ subject }}</a>{% unless forloop.last %}, {% endunless %}
             {% endfor %}
         </td>
@@ -38,7 +38,8 @@
                 {% endif %}
             {% endif %}</td>
         <td>{% if teacher.email %}
-                {{ teacher.email }}
+            <a href="mailto:{{ teacher.email }}">
+                {{ teacher.email }}</a>
             {% endif %}</td>
     </tr>
     {% endfor %}
