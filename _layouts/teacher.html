@@ -6,6 +6,7 @@ layout: default
     <h3 class="sub">Lehrer{% if page.prefix contains "Fr" %}in{% endif %}</h3>
     <a href="/personen/lehrer">Zur Lehrerübersicht</a><br>
     <a href="/personen">Personen am GMB</a>
+    <a href="/personen/schueler">Klassenübersicht</a><br>
     {% for subject in page.subjects %}
     <ul class="simple smallmargin">
         {% assign subjectTeachers = site.teachers | where: "subjects", subject %}
@@ -25,7 +26,7 @@ layout: default
 
 <div class="content">
     <h1 class="{% if page.duty.size > 0 %}float{% endif %}">{{ page.prefix }} {{ page.lastname }}</h1>
-    <h2 class="sub highline-1">{% for duty in page.duty %},
+    <h2 class="sub highline-1 notcenter">{% for duty in page.duty %},
         {{ duty }}{% if page.prefix contains "Fr" %}in{% endif %}{% endfor %}</h2>
     <h4>Unterrichtet:
         {% for subject in page.subjects %}

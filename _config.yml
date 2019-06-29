@@ -31,7 +31,8 @@ collections:
     output: true
     permalink: /personen/lehrer/:title
   classes:
-    output: false
+    output: true
+    permalink: /personen/schueler/:title
 
 
 defaults:
@@ -45,6 +46,13 @@ defaults:
       type: "teachers"
     values:
       layout: "teacher"
+      class: "teacher"
+  - scope:
+      path: ""
+      type: "classes"
+    values:
+      layout: "class"
+      class: "class"
 
 
 # Build settings

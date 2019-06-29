@@ -1,0 +1,66 @@
+---
+layout: default
+class: class
+---
+
+<div class="sidebar">
+    <h3 class="sub">Lehrer{% if page.prefix contains "Fr" %}in{% endif %}</h3>
+    <a href="/personen/schueler">Zur Klassenübersicht</a><br>
+    <a href="/personen">Personen am GMB</a>
+    <a href="/personen/lehrer">Lehrerübersicht</a><br>
+    <ul class="simple smallmargin">
+            {% assign parallelClasses = site.classes | where: "level", {{ page.level }} %}
+            {% if parallelClasses.size > 1 %}
+            <h5>Klassen der Stufe {{ page.level }}</h5>
+            {% for parallelClass in parallelClasses %}
+            {% unless parallelClass.title == page.title %}
+            <li><a href="/personen/schueler/{{ parallelClass.title | downcase }}">
+                    {{ parallelClass.name }}
+                </a></li>
+            {% endunless%}
+            {% endfor %}
+            {% endif %}
+        </ul>
+</div>
+
+<div class="content">
+    {% if page.img %}
+    <img src="{{ page.img }}">
+    {% endif %}
+    <h1 class="float">{{ page.name }}</h1>
+    <h2 class="sub highline-1 notcenter">&nbsp;{{ page.lastupdate }}</h2>
+    <h4>Klassenraum: <span>{{ page.room }}</span></h4>
+    <h4>Lehrer: <span>
+            {% for teacherId in page.teacherIds %}
+            <a href="/personen/lehrer/{{ teacherId }}">
+                {% assign id = teacherId | capitalize %}
+                {% assign teacherPage = site.teachers | where: "title", id %}
+                {% for thisTeacher in teacherPage %}
+                {{ thisTeacher.prefix }} {{ thisTeacher.lastname }}
+                {% endfor %}
+                {% if teacherPage.size == 0 %}
+                {{ teacherId }}
+                {% endif %}
+            </a>
+            {% unless forloop.last %}
+            <span class="sub">und</span>
+            {% endunless %}
+            {% endfor %}
+        </span></h4>
+    {% if page.studentReps.size > 0 %}
+    <h4>Klassensprecher: <span>
+            {% for studentRep in page.studentReps %}
+            {{ studentRep }}
+            {% unless forloop.last %}
+            <span class="sub">und</span>
+            {% endunless %}
+            {% endfor %}
+        </span></h4>
+    {% endif %}
+
+
+    {% if page.content.size > 1 %}
+    <hr>
+    {{ page.content }}
+    {% endif %}
+</div>
