@@ -333,12 +333,12 @@ header .searchcontainer .search {
     width: 100vw;
     top: 0;
     z-index: -99;
-    background: linear-gradient(transparent 100vh, white);
+    background: linear-gradient(to bottom, transparent 100vh, white);
 }
 
 .home header {
     color: white !important;
-    background: linear-gradient(white, transparent);
+    background: linear-gradient(to bottom, white, transparent);
     height: 10em;
 }
 
@@ -555,6 +555,7 @@ img.intext {
 
 .sidebar ul {
     padding-left: 0;
+    padding-bottom: 1em;
 }
 
 .sidebar ul:not(:first-of-type) {
@@ -564,7 +565,7 @@ img.intext {
 @media (max-width: 1250px) {
     .sidebar {
         visibility: visible;
-        background: linear-gradient(#f8f8f8, transparent);
+        background: linear-gradient(to bottom, #f8f8f8, white);
     }
 }
 
