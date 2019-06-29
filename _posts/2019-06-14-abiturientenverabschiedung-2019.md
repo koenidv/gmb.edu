@@ -4,7 +4,8 @@ title: "Verabschiedung der Abiturient:innen 2019"
 subtitle: Verantwortungsbewusst und überaus pragmatisch
 slug: abitur19
 tags: Abitur Abschied
-image: /assets/bg.jpg
+images:
+ - /assets/bg.jpg
 ---
 
 Am Donnerstag, den 13. Juni 2019, wurde unser diesjähriger Abiturjahrgang - bestehend aus 110 Abiturient*innen - in der Aula unserer Schule feierlich verabschiedet. Moderiert wurde der Abend vom "Ehrenschulleiter", Herrn Fachinger, und künstlerisch gerahmt von einem GMB-Chor unter der Leitung von Frau Rübsam. Die Schulleiterin, Frau Manig, begrüßte die insgesamt ca. 400 Gäste und gratulierte den Schulabsolventen und ihren Eltern.

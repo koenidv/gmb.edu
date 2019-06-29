@@ -4,7 +4,11 @@ title: "Fest der Sinne: Mathothek mit einer Auswahl an Exponaten dabei"
 subtitle: "50 Jahre GMB: Fest der Sinne!"
 slug: festdersinne-mathothek
 tags: Sinnesfest Jubiläum Mathothek
-image:
+images:
+ - https://mosbacher-berg.de/sites/mosbacher-berg.de/files/styles/large/public/1_12.jpg?itok=A2aWGbkE
+ - https://mosbacher-berg.de/sites/mosbacher-berg.de/files/styles/large/public/2_13.jpg?itok=afMn050Y
+ - https://mosbacher-berg.de/sites/mosbacher-berg.de/files/styles/large/public/3_11.jpg?itok=ZCmivKOQ
+ - https://mosbacher-berg.de/sites/mosbacher-berg.de/files/styles/large/public/4_12.jpg?itok=DhrAM8o1
 ---
 
 In Absprache mit der Koordinatorin Susanne Glocker-Sforza hat sich die Mathothek mit ca. 20 ausgewählten Exponaten an dem “Fest der Sinne” beteiligt, um so die sinnliche und anschauliche Seite der Mathematik zu demonstrieren. Die Objekte waren so ausgewählt worden, dass sie dem Motto der Ausstellung gemäß und ihrer Natur nach den Seh- und Tastsinn der Besucher besonders ansprachen, außerdem mit großem Mitmach-Appeal auftraten und ohne großartige Anleitungen und Erklärungen auskamen.

@@ -44,7 +44,6 @@ defaults:
 
 # Build settings
 markdown: kramdown
-remote_theme: koenidv/gmb.edu
 plugins:
   - jekyll-feed
 

@@ -32,11 +32,15 @@ title: Aktuelles
     {% for post in site.posts %}
     <a href="{{ post.url }}" class="nostyle">
         <div class="box hover">
+            {% if post.images %}
+            <img class="intext preview" src="{{ post.images | first }}" alt="Vorschaubild">
+            {% endif %}
             <h4 class="sub">{{ post.subtitle }}</h4>
             <h3>{{ post.title }}</h3>
             <p>
-                {{ post.content | split: "<!--break-->" | first }}
+                {{ post.content | regexreplace: "<img.*?(?=>)>\s?" | regexreplace: "\n.*" }}
             </p>
+            <p class="a">Weiterlesen...</p>
         </div>
     </a><br>
     {% endfor %}

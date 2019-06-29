@@ -68,12 +68,14 @@ ul.smallmargin {
     margin-top: 1em !important;
 }
 
-a {
+a,
+.a {
     text-decoration: none;
     color: #268bd2;
 }
 
-a:hover {
+a:hover,
+.a:hover {
     text-decoration: underline;
 }
 
@@ -201,6 +203,7 @@ ul.sub-navigation li {
 ul.sub-navigation li a {
     color: #909090;
     text-decoration: none;
+    width: 100vw;
 }
 
 li:hover ul.sub-navigation,
@@ -369,15 +372,27 @@ section.smallmargin {
 
 .Aktuelles h2 {
     margin-top: 0.7em;
-    margin: inherit auto;
+    margin-top: 0;
 }
 
 .Aktuelles h3 {
-    margin-top: 0.5em;
+    margin-top: 0.25em;
 }
 
 .Aktuelles h4 {
     margin: 0;
+    font-weight: 300;
+}
+
+img.intext.preview {
+    margin-bottom: 0;
+    filter: saturate(1);
+    transition: 200ms;
+}
+
+:hover>img.intext.preview {
+    filter: saturate(1.8);
+    transition: 8000ms;
 }
 
 /*
@@ -453,7 +468,7 @@ img.intext.left {
 
 .box {
     background-color: white;
-    box-shadow: 0 0 10px #dadada;
+    box-shadow: 0 0 5px #dadada;
     border-radius: 1em;
     padding: 1em;
     overflow: hidden;
@@ -461,8 +476,8 @@ img.intext.left {
 }
 
 .box.hover:hover {
-    transform: scale(0.98);
-    box-shadow: 0 0 2px #eaeaea;
+    transform: scale(0.995);
+    box-shadow: 0 0 3px #dadada;
 }
 
 .box .box {
