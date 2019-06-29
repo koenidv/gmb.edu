@@ -3,10 +3,10 @@ layout: default
 ---
 
 <div class="sidebar">
-    <h3 class="sub">Lehrer{% if page.prefix contains "Fr" %}in{% endif %}</h3>
+    <h3 class="sub ">Lehrer{% if page.prefix contains "Fr" %}in{% endif %}</h3>
     <a href="/personen/lehrer">Zur Lehrerübersicht</a><br>
-    <a href="/personen">Personen am GMB</a>
-    <a href="/personen/schueler">Klassenübersicht</a><br>
+    <a href="/personen">Personen am GMB</a><br>
+    <a href="/personen/schueler">Klassenübersicht</a>
     {% for subject in page.subjects %}
     <ul class="simple smallmargin">
         {% assign subjectTeachers = site.teachers | where: "subjects", subject %}
