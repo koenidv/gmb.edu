@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ada74d21-ee5c-446a-a52b-cf285da0d737/deploy-status)](https://app.netlify.com/sites/gmb/deploys)
+
 # gmb.edu
 A desperate try at reworking our school's website.
 

@@ -37,6 +37,11 @@ collections:
 defaults:
   - scope:
       path: ""
+      type: "posts"
+    values:
+      class: "post"
+  - scope:
+      path: ""
       type: "teachers"
     values:
       layout: "teacher"

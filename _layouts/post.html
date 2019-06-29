@@ -1,4 +1,19 @@
 ---
 layout: default
+class: post
 ---
-{{ page.content }}
+
+<div class="sidebar">
+
+</div>
+
+<div class="content">
+    <div class="titleimg">
+        {% for thisimage in page.images limit: 2 %}
+        <img {% if forloop.last %}class="desktoponly"{% endif %} src="{{ thisimage }}">
+        {% endfor %}
+    </div>
+    <div class="container">
+        {{ page.content }}
+    </div>
+</div>
