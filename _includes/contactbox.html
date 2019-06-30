@@ -1,0 +1,38 @@
+<form class="contact box" data-netlify="true" action="">
+    <span>
+        <input type="text" name="name" placeholder="Ihr Name">
+        <input type="email" name="email" placeholder="Ihre E-Mail-Adresse">
+    </span>
+    {% if include.addressee %}
+    <p class="hidden"><select name="addressee[]" selected="{{ include.addressee }}">
+            <option value="{{ include.addressee }}">{{ include.addressee }}</option>
+        </select></p>
+    {% else %}
+    <p>
+        <label>Wen möchten Sie kontaktieren?: <select name="addressee[]">
+                <option value="sekretariat">Sekretariat</option>
+                <option value="personalrat">Personalrat</option>
+                <option value="sv">Schülervertretung</option>
+                <option value="sev">Schulelternbeirat</option>
+                <option value="fv">Förderverein</option>
+                <option value="homepage">Homepageredaktion</option>
+                <option value="zeitung">Schülerzeitung</option>
+                <option value="medienscouts">Medienscouts</option>
+                <option value="shs">Schüler helfen Schülern</option>
+                <option value="seelsorge">Schulseelsorge</option>
+                <option value="sucht">Suchtprävention</option>
+                <optgroup label="Lehrer">
+                    {% assign teachers = site.teachers | sort: "lastname" %}
+                    {% for teacher in teachers %}
+                    <option value="{{ teacher.title | downcase }}">{{ teacher.prefix }} {{ teacher.lastname }}</option>
+                    {% endfor %}
+                </optgroup>
+            </select></label>
+    </p>
+    {% endif %}
+    <textarea name="message" placeholder="Ihre Nachricht"></textarea>
+    <p class="hidden">
+        <label>Bitte nicht ausfüllen: <input name="bot-field" /></label>
+    </p>
+    <button type="submit">Senden</button>
+</form>

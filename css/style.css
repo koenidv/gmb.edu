@@ -18,6 +18,10 @@ body {
     }
 }
 
+.hidden {
+    display: none;
+}
+
 p,
 a,
 span {
@@ -122,7 +126,7 @@ section:not(:first-of-type) {
 
 hr {
     border: 0.5px solid #dadada;
-    margin: 2em 0;
+    margin: 2em auto;
     max-width: 60%;
 }
 
@@ -132,6 +136,10 @@ hr.section {
 }
 
 @media (min-width: 74rem) {
+    hr {
+        margin: 2em 0;
+    }
+
     hr.section {
         margin: 4em 4em 6em 4em;
     }
@@ -529,7 +537,7 @@ img.intext.preview {
  */
 
 .content .container {
-    max-width: 56em;
+    max-width: 56rem;
 }
 
 ul.similiar li {
@@ -605,6 +613,7 @@ img.intext {
         right: 2rem;
         margin-top: 2em;
     }
+
     .titleimg img {
         margin-bottom: 1em;
         border-top-left-radius: 0.1em;
@@ -640,9 +649,10 @@ img.intext {
     box-shadow: 0 0 3px #dadada;
 }
 
-.box .box {
+.box .box,
+.content .box {
     box-shadow: none;
-    border: 1px solid #909090;
+    border: 1px solid #eaeaea;
 }
 
 a.nostyle,
@@ -650,6 +660,11 @@ a.box {
     text-decoration: none;
     color: inherit;
     font-family: inherit;
+    transition: 100ms;
+}
+
+a.nostyle:hover {
+    color: #268bd2;
 }
 
 .box.seemore {
@@ -727,4 +742,73 @@ tr.hover:hover {
  */
 .home .carousel-inner {
     padding: 0 8em;
+}
+
+/*
+ * Contact
+ */
+
+.contact.box {
+    max-width: 56rem;
+}
+
+.contact input,
+.contact textarea {
+    padding: 1rem;
+    font-size: 1.15rem;
+    width: calc(100% - 2rem);
+    border: none;
+    border-bottom: 1px solid #909090;
+    background-color: #f8f8f8;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 0.5rem;
+    transition: 100ms;
+}
+
+@media (min-width: 74rem) {
+    .contact input,
+    .contact textarea {
+        width: calc(50% - 2.5rem);
+        margin-bottom: 1rem;
+    }
+    .contact input:last-of-type {
+        margin-left: 0.5rem;
+    }
+}
+
+.contact textarea {
+    font-size: 1rem;
+    height: 10rem;
+    width: calc(100% - 2rem);
+    resize: vertical;
+}
+
+.contact input:hover,
+.contact textarea:hover {
+    border-bottom: 1px solid #007090;
+    background-color: #00709015;
+}
+
+.contact button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid #909090;
+    border-radius: 0.5rem;
+    width: 100%;
+    transition: 100ms;
+}
+
+@media (min-width: 74rem) {
+    .contact button {
+        width: unset;
+        min-width: 35%;
+    }
+}
+
+.contact button:hover {
+    border: 1px solid #007090;
+    background-color: #00709040;
 }

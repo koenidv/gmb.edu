@@ -22,7 +22,7 @@ class: class
     </ul>
 
     <ul class="simple smallmargin">
-        {% assign subjectTeachers = site.teachers | where: "subjects", page.title %}
+        {% assign subjectTeachers = site.teachers | where: "subjects", page.title | sort: "lastname" %}
         {% if subjectTeachers.size > 0 %}
         <h5>{{ page.title }}lehrer</h5>
         {% for subjectTeacher in subjectTeachers %}

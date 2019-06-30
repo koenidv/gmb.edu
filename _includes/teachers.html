@@ -6,7 +6,8 @@
         <td>Raum</td>
         <td>Kontakt</td>
     </tr>
-    {% for teacher in site.teachers | sort: "lastname" %}
+    {% assign teachers = site.teachers | sort: "lastname" %}
+    {% for teacher in teachers %}
     <tr class="hover" onclick="window.location = '{{ teacher.url }}'">
         <td>{{ teacher.prefix }} {{ teacher.lastname }}
             {% if teacher.duty %}
