@@ -4,12 +4,12 @@ class: class
 ---
 
 <div class="sidebar">
-    <h3 class="sub">Lehrer{% if page.prefix contains "Fr" %}in{% endif %}</h3>
+    <h3 class="sub">Klasse</h3>
     <a href="/personen/schueler">Zur Klassenübersicht</a><br>
     <a href="/personen">Personen am GMB</a>
     <a href="/personen/lehrer">Lehrerübersicht</a><br>
     <ul class="simple smallmargin">
-            {% assign parallelClasses = site.classes | where: "level", {{ page.level }} %}
+            {% assign parallelClasses = site.classes | where: "level", page.level %}
             {% if parallelClasses.size > 1 %}
             <h5>Klassen der Stufe {{ page.level }}</h5>
             {% for parallelClass in parallelClasses %}

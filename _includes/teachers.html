@@ -20,7 +20,7 @@
         </td>
         <td class="desktoponly">
             {% for subject in teacher.subjects %}
-            <a href="/unterricht/fächer/{{ subject | downcase }}">
+            <a href="/unterricht/faecher/{{ subject | downcase }}">
                 {{ subject }}</a>{% unless forloop.last %}, {% endunless %}
             {% endfor %}
         </td>

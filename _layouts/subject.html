@@ -1,0 +1,125 @@
+---
+layout: default
+class: class
+---
+
+<div class="sidebar">
+    <h3 class="sub">{% if page.ismajor %}Hauptfach{% else %}Fach{% endif %}</h3>
+    <a href="/unterricht/schwerpunkte">Unsere Schwerpunkte</a><br>
+    <a href="/unterricht/wu">Wahlunterricht</a><br>
+    <a href="/unterricht/fahrten">Fahrten</a><br>
+    <a href="/unterricht/oberstufe">Oberstufe</a><br>
+
+    <ul class="simple smallmargin">
+        <h5>Andere Fächer</h5>
+        {% for subject in site.subjects  %}
+        {% unless subject.title == page.title %}
+        <li><a href="{{ subject.url }}">
+                {{ subject.title }}
+            </a></li>
+        {% endunless%}
+        {% endfor %}
+    </ul>
+
+    <ul class="simple smallmargin">
+        {% assign subjectTeachers = site.teachers | where: "subjects", page.title %}
+        {% if subjectTeachers.size > 0 %}
+        <h5>{{ page.title }}lehrer</h5>
+        {% for subjectTeacher in subjectTeachers %}
+        <li><a href="{{ subjectTeacher.url }}">
+                {{ subjectTeacher.prefix }} {{ subjectTeacher.lastname }}
+            </a></li>
+        {% endfor %}
+        {% endif %}
+    </ul>
+
+    <ul class="simple smallmargin">
+        {% assign subjectPosts = site.posts | where: "tags", page.title %}
+        {% if subjectPosts.size > 0 %}
+        <h5>Neuigkeiten</h5>
+        {% for subjectPost in subjectPosts limit: 5 %}
+        <li><a href="{{ subjectPost.url }}">
+                {{ subjectPost.title }} - <span class="sub">{{ subjectPost.date | date: "%-d.%-m.%y"}}</span>
+            </a></li>
+        {% endfor %}
+        {% endif %}
+    </ul>
+</div>
+
+<div class="content">
+    <div class="titleimg">
+        {% for thisimage in page.images limit: 3 %}
+        <img {% unless forloop.index == 1 %}class="desktoponly" {% endunless %} src="{{ thisimage }}">
+        {% endfor %}
+    </div>
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+        {{ page.content }}
+        {% if page.content.size > 1 %}
+        <hr>
+        <h3>Informationen zum Fach {{ page.title }}</h3>
+        {% endif %}
+        {% capture description %}
+        {% if page.ismajor or page.isintense %}
+        {{ page.title }}
+        {% if page.ismajor %}
+        ist ein Hauptfach{% if page.isintense %} und {% else %}.{% endif %}
+        {% endif %}
+        {% if page.isintense %}
+        wird als Leistungskurs angeboten.
+        {% endif %}
+        {% endif %}
+        {% endcapture %}
+        <h5>{{ description }}</h5>
+        <div class="subjectinfogrid">
+            <div class="weeklyhours">
+                <h4>Wochenstunden:</h4>
+                <ul class="simple">
+                    {% for level in page.perlevel %}
+                    <li>
+                        {% if level.hours.size %}
+                        <h5><span>{{ level.level }}:</span> {{ level.hours }}</h5>
+                        {% else if level.hours_intense %}
+                        <h5><span>{{level.level}}: </span></h5>
+                        <ul class="sublist">
+                            <li>
+                                <h5><span>Leistungskurs:</span> {{ level.hours_intense }}</h5>
+                            </li>
+                            <li>
+                                <h5><span>Grundkurs:</span> {{ level.hours_basic }}</h5>
+                            </li>
+                        </ul>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="schoolcurricula">
+                <h4>Fachcurricula:</h4>
+                <ul class="simple">
+                    {% for level in page.perlevel %}
+                    {% if level.school_curriculum %}
+                    <li>
+                        <a href="{{ level.school_curriculum }}" target="_blank">Fachcurriculum {{ level.level }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="corecurricula">
+                <h4>Kerncurricula:</h4>
+                <ul class="simple">
+                    {% for level in page.core_curricula %}
+                    {% if level.core_curriculum %}
+                    <li>
+                        <a href="{{ level.core_curriculum }}" target="_blank">Kerncurriculum {{ level.level }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Todo used books? -->

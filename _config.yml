@@ -33,6 +33,9 @@ collections:
   classes:
     output: true
     permalink: /personen/schueler/:title
+  subjects:
+    output: true
+    permalink: /unterricht/faecher/:title
 
 
 defaults:
@@ -53,7 +56,12 @@ defaults:
     values:
       layout: "class"
       class: "class"
-
+  - scope:
+      path: ""
+      type: "subjects"
+    values:
+      layout: "subject"
+      class: "subject"
 
 # Build settings
 markdown: kramdown

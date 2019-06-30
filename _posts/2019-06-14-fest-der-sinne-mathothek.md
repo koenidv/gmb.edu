@@ -3,7 +3,7 @@ layout: post
 title: "Fest der Sinne: Mathothek mit einer Auswahl an Exponaten dabei"
 subtitle: "50 Jahre GMB: Fest der Sinne!"
 slug: festdersinne-mathothek
-tags: Sinnesfest Jubiläum Mathothek
+tags: Sinnesfest Jubiläum Mathothek Mathematik
 images:
  - https://mosbacher-berg.de/sites/mosbacher-berg.de/files/styles/large/public/1_12.jpg?itok=A2aWGbkE
  - https://mosbacher-berg.de/sites/mosbacher-berg.de/files/styles/large/public/2_13.jpg?itok=afMn050Y

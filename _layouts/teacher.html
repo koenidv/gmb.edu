@@ -14,7 +14,7 @@ layout: default
         <h5>Weitere {{ subject }}lehrer</h5>
         {% for subjectTeacher in subjectTeachers %}
         {% unless subjectTeacher.title == page.title %}
-        <li><a href="/personen/lehrer/{{ subjectTeacher.title | downcase }}">
+        <li><a href="{{ subjectTeacher.url }}">
                 {{ subjectTeacher.prefix }} {{ subjectTeacher.lastname }}
             </a></li>
         {% endunless%}
