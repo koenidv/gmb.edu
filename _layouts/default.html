@@ -5,11 +5,27 @@
 
 <body class="{{ page.class }}">
 
+    <div id="404" class="notfoundinfo hidden" onclick="hide404Warning()">
+        Deine angeforderte Seite konnte nicht gefunden werden.
+        &nbsp;&nbsp;Schließen
+    </div>
+
     {% include navigation.html %}
 
     <div class="sidebargrid">
         {{ content | markdownify }}
     </div>
+
+    <script>
+        // Show error if page could not be found
+        if (window.location.href.includes("?404")) {
+            document.getElementById("404").classList.remove("hidden");
+        }
+
+        function hide404Warning() {
+            window.location.replace(document.location.toString().replace("?404", ""));
+        }
+    </script>
 
 </body>
 

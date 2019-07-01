@@ -1,9 +1,22 @@
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% if page.title %} {{ page.title }} &middot; {{ site.title }} {% else %} {{ site.browsertitle }} {% endif %}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% capture title %}
+  {% if page.class == "teacher" %}
+  {{ page.prefix }} {{ page.lastname }}
+  {% else if page.class == "class" %}
+  Klasse {{ page.name }}
+  {% else %}
+  {{ page.title }}
+  {% endif %}
+  {% endcapture %}
+  <title>{% if page.title %} {{ title }} &middot; {{ site.title }} {% else %} {{ site.browsertitle }} {% endif %}
+  </title>
 
-    <!-- CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="/css/style.css">
+
+  <!-- JS -->
+  <script src="https://kit.fontawesome.com/ce297c31e0.js"></script>
 </head>
