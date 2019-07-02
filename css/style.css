@@ -335,7 +335,7 @@ header .searchcontainer .search::placeholder {
     }
 
     .menuactive header {
-        min-height: 300%;
+        min-height: 100%;
         height: fit-content;
         background: linear-gradient(to bottom, white 4.5rem, #ffffff80 4.5rem, #ffffff80 4.5rem, rgba(255, 255, 255, 0) 100%);
         position: absolute;
@@ -358,6 +358,49 @@ header .searchcontainer .search::placeholder {
 
     .menuactive header #menu {
         display: unset;
+    }
+
+    ul.navigation,
+    ul.navigation * {
+        list-style: none;
+        padding: 0;
+        color: #404040;
+    }
+
+    ul.navigation>li {
+        background-color: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 5px #dadada;
+        margin: 0 1rem 0.5rem 1rem;
+        padding: 1rem 0;
+    }
+
+    ul.navigation i.material-icons-round {
+        color: #606060;
+        line-height: 1.2rem;
+        vertical-align: text-bottom;
+        transition: transform 250ms;
+    }
+
+    ul.sub-navigation {
+        display: none;
+    }
+
+    ul.sub-navigation li {
+        margin-top: 0.75rem;
+    }
+
+    li:hover>ul.sub-navigation {
+        display: unset;
+    }
+
+    li:hover i.material-icons-round {
+        transform: rotateX(-180deg);
+    }
+
+    ul.sub-navigation li.more {
+        background: linear-gradient(to bottom, #f8f8f8, white);
+        padding-top: 0.5rem;
     }
 }
 
