@@ -252,7 +252,7 @@ header .searchcontainer .search::placeholder {
 .notfoundinfo {
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 5rem;
     left: 0;
     background-color: crimson;
     padding: 0.5em;
@@ -266,7 +266,7 @@ header .searchcontainer .search::placeholder {
 
 @media (max-width: 74rem) {
     body {
-        margin-top: 5rem;
+        margin-top: 4.5rem;
     }
 
     header {
@@ -303,7 +303,7 @@ header .searchcontainer .search::placeholder {
         width: 100vw;
         top: 4.5rem;
         left: 0;
-        background: linear-gradient(to bottom, white 25%, transparent);
+        background: linear-gradient(to bottom, white 25%, rgba(255, 255, 255, 0));
         z-index: 999;
     }
 
@@ -319,7 +319,7 @@ header .searchcontainer .search::placeholder {
         right: 1rem;
         height: 4rem;
         width: 4rem;
-        color: #202020;
+        color: #404040;
         transition: color 200ms;
     }
 
@@ -507,12 +507,12 @@ header .searchcontainer .search::placeholder {
     width: 100vw;
     top: 0;
     z-index: -99;
-    background: linear-gradient(to bottom, transparent 100vh, white);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 100vh, white);
 }
 
 .home header {
     color: white !important;
-    background: linear-gradient(to bottom, white, transparent);
+    background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
     height: 10em;
 }
 
