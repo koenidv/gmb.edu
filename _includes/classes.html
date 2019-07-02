@@ -1,5 +1,5 @@
 <table class="classes" id="classes">
-    <tr class="title desktoponly">
+    <tr class="title desktoptablet">
         <td>Bild</td>
         <td>Klasse</td>
         <td>Lehrer</td>
@@ -8,7 +8,7 @@
     </tr>
     {% for class in site.classes | sort: "level" %}
     <tr class="hover" onclick="window.location = '{{ class.url }}'">
-        <td class="imgtd desktoponly">{% if class.img %}
+        <td class="imgtd desktoptablet">{% if class.img %}
             <img src="{{ class.img }}" alt="Klassenfoto der Klasse {{ class.name }}">
             {% endif %}
         </td>
@@ -33,14 +33,14 @@
             {% endunless %}
             {% endfor %}
         </td>
-        <td class="desktoponly">{% for studentRep in class.studentReps %}
+        <td class="desktoptablet">{% for studentRep in class.studentReps %}
             {{ studentRep }}
             {% unless forloop.last %}
             <span class="sub">und</span>
             {% endunless %}
             {% endfor %}
         </td>
-        <td class="desktoponly">{{ class.room }}</td>
+        <td class="desktoptablet">{{ class.room }}</td>
     </tr>
     {% endfor %}
 </table>

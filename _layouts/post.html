@@ -9,7 +9,7 @@ layout: default
 <div class="content">
     <div class="titleimg">
         {% for thisimage in page.images limit: 2 %}
-        <img {% if forloop.last %}class="desktoponly"{% endif %} src="{{ thisimage }}">
+        <img {% if forloop.last %}class="desktoptablet"{% endif %} src="{{ thisimage }}">
         {% endfor %}
     </div>
     <div class="container">

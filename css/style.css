@@ -22,6 +22,12 @@ body.blur>:not(header) {
     }
 }
 
+@media (max-width: 56rem) {
+    .desktoptablet {
+        display: none;
+    }
+}
+
 @media (min-width: 74rem) {
     .mobileonly {
         display: none;
@@ -331,7 +337,7 @@ header .searchcontainer .search::placeholder {
     .menuactive header {
         min-height: 300%;
         height: fit-content;
-        background: linear-gradient(to bottom, white 4.5rem, #ffffff80 4.5rem,#ffffff80 4.5rem, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(to bottom, white 4.5rem, #ffffff80 4.5rem, #ffffff80 4.5rem, rgba(255, 255, 255, 0) 100%);
         position: absolute;
     }
 
@@ -538,7 +544,13 @@ header .searchcontainer .search::placeholder {
     background-color: #efefef;
 }
 
-@media (min-width: 74rem) {
+@media (min-width: 56rem) {
+    .newsgrid {
+        grid-template-columns: calc(50% - 0.5em) calc(50% - 0.5em);
+    }
+}
+
+@media (min-width: 88rem) {
     .newsgrid {
         grid-template-columns: repeat(4, calc(25% - 2.25em)) 5em;
     }
@@ -582,7 +594,7 @@ header .searchcontainer .search::placeholder {
     margin: 0.4em 0;
 }
 
-@media (min-width: 74rem) {
+@media (min-width: 88rem) {
 
     .newsgrid .box:nth-child(1),
     .newsgrid .box:nth-child(3) {
@@ -694,9 +706,18 @@ header .searchcontainer .search::placeholder {
     box-shadow: none;
 }
 
-@media (min-width: 74rem) {
-    .blog .content {
-        margin-right: 20em;
+@media (min-width: 56rem) {
+
+    .blog .content,
+    .post .content {
+        padding-right: 24rem;
+    }
+}
+
+@media (min-width: 88rem) {
+    .blog .content,
+    .post .content {
+        padding-right: 36rem;
     }
 }
 
@@ -744,8 +765,8 @@ ul.similiar li {
 }
 
 table img {
-    height: 20em;
-    width: 30em;
+    height: 20rem;
+    width: 30rem;
     object-fit: cover;
 }
 
@@ -764,7 +785,7 @@ img.intext {
     height: 16em;
 }
 
-@media (min-width: 74rem) {
+@media (min-width: 56rem) {
     .class :not(.logo)>img {
         width: 56em;
         height: auto;
@@ -805,9 +826,9 @@ img.intext {
     height: 18em;
 }
 
-@media (min-width: 74rem) {
+@media (min-width: 56rem) {
     .titleimg {
-        width: 32rem;
+        width: 20rem;
         position: absolute;
         right: 2rem;
         margin-top: 2em;
@@ -816,6 +837,12 @@ img.intext {
     .titleimg img {
         margin-bottom: 1em;
         border-top-left-radius: 0.1em;
+    }
+}
+
+@media (min-width: 88rem) {
+    .titleimg {
+        width: 32rem;
     }
 }
 
