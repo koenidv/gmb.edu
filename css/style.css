@@ -7,6 +7,12 @@ body {
 }
 
 @media (max-width: 74rem) {
+    body:not(.post) {
+        text-align: center;
+    }
+}
+
+@media (max-width: 74rem) {
     .desktoponly {
         display: none;
     }
@@ -165,6 +171,16 @@ header {
 header .logo {
     position: absolute;
     left: 1rem;
+    background-color: #404040;
+    width: 5rem;
+    height: 5rem;
+    -webkit-mask: url(/assets/logo.svg) no-repeat center;
+    mask: url(/assets/logo.svg) no-repeat center;
+    transition: background-color 200ms;
+}
+
+header .logo:hover {
+    background-color: #004070;
 }
 
 header .searchcontainer {
@@ -222,11 +238,8 @@ header .searchcontainer .search {
 
     header .logo {
         padding: 1rem 1rem 0 1rem;
+        margin-top: 0.5rem;
         left: calc(50% - 4rem);
-    }
-
-    header .logo img {
-        width: 5em;
     }
 
     ul {
@@ -676,6 +689,51 @@ img.intext {
 }
 
 /*
+ * Downloads
+ */
+
+.downloadsgrid {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 50% 50%;
+}
+
+.downloadsgrid .box {
+    height: 12rem;
+}
+
+.download p:first-of-type {
+    font-weight: 900;
+    margin-top: 0.25rem;
+}
+
+.download img.preview {
+    overflow: hidden;
+    width: 100%;
+    margin: 1.5rem auto;
+    display: block;
+    box-shadow: 0 0 5px #dadada;
+    border-radius: 0.5rem;
+    transition: 200ms;
+}
+
+.download.box.hover:hover img.preview {
+    box-shadow: 0 0 1px #dadada;
+}
+
+@media (min-width: 74rem) {
+    .downloadsgrid {
+        grid-template-columns: 33% 33% 33%;
+    }
+    .downloadsgrid .box {
+        height: 18rem;
+    }
+    .download img.preview {
+        width: 80%;
+    }
+}
+
+/*
   * Boxes
   */
 
@@ -697,6 +755,14 @@ img.intext {
 .content .box {
     box-shadow: none;
     border: 1px solid #eaeaea;
+    transition: 200ms;
+}
+
+.box .box.hover:hover,
+.content .box.hover:hover {
+    box-shadow: 0 0 5px #eaeaea;
+    border: 0.5px solid #eaeaea;
+    transform: scale(1.01);
 }
 
 a.nostyle,

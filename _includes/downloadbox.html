@@ -1,0 +1,8 @@
+<a href="{{ include.url }}"
+target="_blank" class="box hover download">
+<p>{{ include.title }}</p>
+<p>{{ include.description }}</p>
+{% if include.img %}
+<img class="preview" src="{{ include.img }}" alt="Vorschau von {{ include.title }}">
+{% endif %}
+</a>
