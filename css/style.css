@@ -12,6 +12,14 @@ body {
     }
 }
 
+body.menuactive {
+    overflow: hidden;
+}
+
+body.blur>:not(header) {
+    filter: blur(6px);
+}
+
 @media (max-width: 74rem) {
     .desktoponly {
         display: none;
@@ -43,6 +51,7 @@ h2 {
 }
 
 @media (max-width: 74rem) {
+
     h1:not(.notcenter),
     h2:not(.notcenter) {
         text-align: center;
@@ -183,6 +192,40 @@ header .logo:hover {
     background-color: #004070;
 }
 
+/* Shine */
+header .logo:hover:after {
+    content: '';
+    top: 0;
+    transform: translateX(100%);
+    width: 100%;
+    height: 220px;
+    position: absolute;
+    z-index: 1;
+    animation: slide 800ms 200ms;
+
+    /* 
+  CSS Gradient - complete browser support from http://www.colorzilla.com/gradient-editor/ 
+  */
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(128, 186, 232, 0) 99%, rgba(125, 185, 232, 0) 100%);
+    /* FF3.6+ */
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(128, 186, 232, 0) 99%, rgba(125, 185, 232, 0) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(128, 186, 232, 0) 99%, rgba(125, 185, 232, 0) 100%);
+    /* W3C */
+}
+
+/* animation */
+
+@keyframes slide {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
 header .searchcontainer {
     height: 4rem;
     position: absolute;
@@ -191,15 +234,19 @@ header .searchcontainer {
 
 header .searchcontainer .search {
     height: 2.25rem;
-    width: calc(100vw - 12rem);
+    width: calc(100vw - 11.5rem);
     font-size: 1rem;
     padding: 0.5em;
-    margin: 1.75rem 0;
+    margin: 1.25rem 0;
     border-radius: 0.25em;
     border: 1px solid #202020;
     display: table-cell;
     vertical-align: middle;
     background-color: transparent;
+}
+
+header .searchcontainer .search::placeholder {
+    text-align: center;
 }
 
 .notfoundinfo {
@@ -218,15 +265,88 @@ header .searchcontainer .search {
 }
 
 @media (max-width: 74rem) {
+    body {
+        margin-top: 5rem;
+    }
+
+    header {
+        position: fixed;
+        width: 100vw;
+        height: 4.5rem;
+        top: 0;
+        left: 0;
+        background-color: white;
+        z-index: 1000;
+    }
+
+    .home header {
+        position: absolute;
+    }
+
+    body:not(.home)::before {
+        content: "";
+        display: block;
+        position: fixed;
+        height: 4.5rem;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        box-shadow: 0 0 5px #dadada;
+        z-index: 998;
+    }
+
+    body:not(.home)::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 1rem;
+        width: 100vw;
+        top: 4.5rem;
+        left: 0;
+        background: linear-gradient(to bottom, white 25%, transparent);
+        z-index: 999;
+    }
+
     header .logo {
-        top: 1rem;
+        top: 0.5rem;
         height: 4rem;
         width: 4rem;
     }
 
-    header ul {
+    header .menutoggler {
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        height: 4rem;
+        width: 4rem;
+        color: #202020;
+        transition: color 200ms;
+    }
+
+    header .menutoggler:hover {
+        color: #004070;
+    }
+
+    header .menutoggler i {
+        padding-top: 0.6rem;
+        font-size: 2.5rem;
+    }
+
+    header #menu {
         display: none;
+        position: fixed;
+        top: 5rem;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        overflow-y: scroll;
+        background-color: #ffffff80;
+        z-index: 1000;
         /* todo */
+    }
+
+    header #menu.active {
+        display: unset;
     }
 }
 
@@ -376,6 +496,7 @@ header .searchcontainer .search {
     width: 100vw;
     position: absolute;
     top: 0;
+    left: 0;
     z-index: -100;
     object-fit: cover;
 }
@@ -416,13 +537,18 @@ header .searchcontainer .search {
     .newsgrid {
         grid-template-columns: repeat(4, calc(25% - 2.25em)) 5em;
     }
+
     .newsgrid .box {
-        height: 28em;
+        height: 28rem;
+        max-height: unset;
+        margin: 1rem 0;
     }
+
     section.smallmargin {
         margin-left: 2em;
         margin-right: 2em;
     }
+
     .box.seemore * {
         width: 100%;
         height: 100%;
@@ -561,7 +687,12 @@ header .searchcontainer .search {
 .blog .content {
     padding-top: 0;
     box-shadow: none;
-    margin-right: 20em;
+}
+
+@media (min-width: 74rem) {
+    .blog .content {
+        margin-right: 20em;
+    }
 }
 
 .blog h2 {
@@ -574,8 +705,14 @@ header .searchcontainer .search {
 }
 
 .blog h4 {
-    margin: 0;
+    margin: 0.25rem 0;
     font-weight: 300;
+}
+
+@media (min-width: 74rem) {
+    .blog h4 {
+        margin: 0;
+    }
 }
 
 img.intext.preview {
@@ -725,9 +862,11 @@ img.intext {
     .downloadsgrid {
         grid-template-columns: 33% 33% 33%;
     }
+
     .downloadsgrid .box {
         height: 18rem;
     }
+
     .download img.preview {
         width: 80%;
     }
