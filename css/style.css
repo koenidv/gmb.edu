@@ -12,10 +12,6 @@ body {
     }
 }
 
-body.menuactive {
-    overflow: hidden;
-}
-
 body.blur>:not(header) {
     filter: blur(6px);
 }
@@ -332,20 +328,29 @@ header .searchcontainer .search::placeholder {
         font-size: 2.5rem;
     }
 
-    header #menu {
-        display: none;
-        position: fixed;
-        top: 5rem;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        overflow-y: scroll;
-        background-color: #ffffff80;
-        z-index: 1000;
-        /* todo */
+    .menuactive header {
+        min-height: 300%;
+        height: fit-content;
+        background: linear-gradient(to bottom, white 4.5rem, #ffffff80 4.5rem,#ffffff80 4.5rem, rgba(255, 255, 255, 0) 100%);
+        position: absolute;
     }
 
-    header #menu.active {
+    body.menuactive::before,
+    body.menuactive::after {
+        position: absolute;
+    }
+
+    header #menu {
+        display: none;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        height: fit-content;
+        width: 100vw;
+        z-index: 1000;
+    }
+
+    .menuactive header #menu {
         display: unset;
     }
 }

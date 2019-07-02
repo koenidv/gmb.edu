@@ -1,4 +1,10 @@
 <header class="">
+    <a href="/" alt="Gymnasium am Mosbacher Berg" class="logo">
+        <!-- Source is set by CSS-->
+    </a>
+    <div class="searchcontainer">
+        <input type="search" class="search" placeholder="Was möchtest du wissen?">
+    </div>
     <div class="menu" id="menu">
         <ul class="navigation">
             <li>
@@ -145,16 +151,10 @@
             </li>
         </ul>
     </div>
-    <a href="/" alt="Gymnasium am Mosbacher Berg" class="logo">
-        <!-- Source is set by CSS-->
-    </a>
-    <div class="searchcontainer">
-        <input type="search" class="search" placeholder="Was möchtest du wissen?">
-    </div>
     <div class="menutoggler mobileonly" onclick="
             document.getElementById('menu').classList.toggle('active');
-            document.body.classList.toggle('blur');
-            document.body.classList.toggle('menuactive');">
+            document.body.classList.toggle('menuactive');
+            document.body.classList.toggle('blur');">
         <i class="material-icons-round">
             menu
         </i>
