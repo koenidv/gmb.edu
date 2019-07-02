@@ -412,10 +412,10 @@ header .searchcontainer .search::placeholder {
 
     ul.sub-navigation {
         margin: 0;
-        padding: 1em;
-        top: 5em;
-        left: -3.2em;
-        width: 14em;
+        padding: 1rem;
+        top: 5rem;
+        left: -3.2rem;
+        width: 14rem;
         z-index: 1000;
         visibility: hidden;
         position: absolute;
@@ -424,6 +424,12 @@ header .searchcontainer .search::placeholder {
         background-color: white;
         box-shadow: 0 0 10px #dadada;
         border-radius: 0.75em;
+    }
+
+    @media (max-width: 80rem) {
+        li:first-child>ul.sub-navigation {
+            left: 0rem;
+        }
     }
 
     ul.sub-navigation::after {
