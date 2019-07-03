@@ -1,9 +1,16 @@
 ---
 layout: default
+class: "downloads"
 ---
 
 <div class="sidebar">
-
+    <h3 class="sub">Downloads</h3>
+    <ul class="simple">
+        <h4>Verknüpft</h4>
+        <li><a href="/downloads/briefe">
+                Briefe
+            </a></li>
+    </ul>
 </div>
 
 <div class="content">
@@ -11,7 +18,7 @@ layout: default
     <p>Eine Beschreibung für die Downloads.</p>
     <hr>
     <h2>Schulordnung</h2>
-    <div class="downloads downloadsgrid">
+    <div class="downloadsgrid">
         {% include downloadbox.html url="https://mosbacher-berg.de/sites/mosbacher-berg.de/files/binaries/Schulordnung_Kurzform.pdf"
             title="Schulordnung Kurzfassung" img="preview/schulordnung_kurz.jpg" %}
         {% include downloadbox.html url="https://mosbacher-berg.de/sites/mosbacher-berg.de/files/binaries/Schulordnung_Langfassung.pdf"
@@ -19,7 +26,7 @@ layout: default
     </div>
     <hr>
     <h2>Formulare</h2>
-    <div class="downloads downloadsgrid">
+    <div class="downloadsgrid">
         {% include downloadbox.html url="https://mosbacher-berg.de/sites/mosbacher-berg.de/files/Entschuldigung_im_Krankheitsfalle.pdf"
             title="Entschuldigung im Krankheitsfall" img="preview/formular_krankheitsfall.jpg" %}
         {% include downloadbox.html url="https://mosbacher-berg.de/sites/mosbacher-berg.de/files/Antrag_Befreiung_vom_Unterricht.pdf"
@@ -27,13 +34,23 @@ layout: default
     </div>
     <hr>
     <h2>Offene Briefe</h2>
-    <div class="downloads downloadsgrid">
+    <div class="downloadsgrid fourgrid">
         {% include downloadbox.html url="https://mosbacher-berg.de/sites/mosbacher-berg.de/files/Elternbrief_Sommer_2018.pdf"
             title="Elternbrief zum Schuljahr 2018/19" description="Der originale Link ist kaputt..." %}
         {% include downloadbox.html url="https://mosbacher-berg.de/sites/mosbacher-berg.de/files/Herkunftsprachl_Unterricht_2018_19.pdf"
             title="Herkunfts&shy;sprachlicher Unterricht 2018/19" description="Auch hierbei ist der originale Link kaputt..." %}
         {% include downloadbox.html
-            url="https://mosbacher-berg.de/sites/mosbacher-berg.de/files/Jugendmedienschutz_Brief_an_F%C3%BCnftkl%C3%A4sslereltern_end-2%20dezember%202016.docx"
-            title="Medienschutz: Brief an Fünftklässler" img="preview/brief_jugendmedienschutz.jpg" %}
+            url="brief_jugendmedienschutz_2016.pdf"
+            title="Medienschutz für Fünftklässler" img="preview/brief_jugendmedienschutz_2016.jpg" %}
+        {% include downloadbox.html
+            url="brief_whatsapp_2016.pdf"
+            title="Elternbrief zu WhatsApp" img="preview/brief_whatsapp_2016.jpg" %}
+    </div>
+    <a href="briefe" class="more">Zu allen Briefen 🡒</a><br><br>
+    <hr>
+    <h2>Weitere Dateien</h2>
+    <div class="downloadsgrid">
+        {% include downloadbox.html url="selbsteinschaetzung_kopfnoten.pdf"
+                title="Selbsteinschätzung der Kopfnoten" img="preview/selbsteinschaetzung_kopfnoten.jpg" %}
     </div>
 </div>
