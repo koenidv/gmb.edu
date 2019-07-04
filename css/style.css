@@ -12,13 +12,13 @@ body {
     }
 }
 
-body.blur>:not(header) {
-    filter: blur(6px);
-}
-
 @media (max-width: 74rem) {
     .desktoponly {
         display: none !important;
+    }
+
+    body.menuactive>:not(header) {
+        filter: blur(6px);
     }
 }
 
@@ -264,6 +264,7 @@ header .searchcontainer .search::placeholder {
     .notfoundinfo {
         top: 5rem;
     }
+
     body {
         margin-top: 4.5rem;
     }
@@ -742,6 +743,7 @@ header .searchcontainer .search::placeholder {
         height: fit-content;
         top: 0.5rem;
     }
+
     .content {
         box-shadow: 0 0 10px #dadada;
         padding: 2em 4em;
@@ -768,6 +770,7 @@ header .searchcontainer .search::placeholder {
 }
 
 @media (min-width: 88rem) {
+
     .blog .content,
     .post .content {
         padding-right: 36rem;
