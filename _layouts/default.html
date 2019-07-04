@@ -25,6 +25,10 @@
         function hide404Warning() {
             window.location.replace(document.location.toString().replace("?404", ""));
         }
+
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speedAsDuration: true
+        });
     </script>
 
 </body>
