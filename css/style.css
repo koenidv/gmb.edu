@@ -70,6 +70,7 @@ h3 {
 }
 
 h4 {
+    margin-top: 0;
     font-size: 1.3em;
 }
 
@@ -108,6 +109,10 @@ ul.simple {
 
 ul.smallmargin {
     margin-top: 1rem !important;
+}
+
+ul:not(.simple) {
+    text-align: left;
 }
 
 @media (min-width: 74rem) {
@@ -181,7 +186,7 @@ header .logo {
     height: 5rem;
     -webkit-mask: url(/assets/logo.svg) no-repeat center;
     mask: url(/assets/logo.svg) no-repeat center;
-    transition: background-color 200ms;
+    transition: background-color 800ms;
 }
 
 header .logo:hover {
@@ -416,7 +421,7 @@ header .searchcontainer .search::placeholder {
         left: calc(50% - 4rem);
     }
 
-    ul {
+    ul.simple {
         margin: 0;
         padding: 0;
     }
@@ -972,7 +977,7 @@ img.intext {
 .box {
     background-color: white;
     box-shadow: 0 0 5px #dadada;
-    border-radius: 1em;
+    border-radius: 0.75rem;
     padding: 1em;
     overflow: hidden;
     transition: 200ms ease-out;
@@ -981,6 +986,12 @@ img.intext {
 .box.hover:hover {
     transform: scale(0.995);
     box-shadow: 0 0 3px #dadada;
+}
+
+@media (min-width: 74rem) {
+    .box.bubble {
+        border-top-left-radius: 0.1rem;
+    }
 }
 
 .box .box,
@@ -1082,11 +1093,66 @@ tr.hover:hover {
     grid-template-columns: auto auto;
 }
 
+
+.intextgrid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: "second""first";
+}
+
+.intextgrid :nth-child(odd) {
+    grid-area: first;
+}
+
+.intextgrid :nth-child(even) {
+    grid-area: second;
+}
+
+.intextgrid img {
+    border-radius: 0.75rem;
+    width: 100%;
+    max-height: 22rem;
+    object-fit: cover;
+    object-position: 0 35%;
+}
+
+@media (max-width: 74rem) {
+    .intextgrid>* {
+        max-width: 100%;
+    }
+
+    .intextgrid.mobileinvert {
+        grid-template-areas: "first" "second";
+    }
+}
+
 @media (min-width: 88rem) {
     .fourgrid {
         display: grid;
         grid-gap: 0.5rem;
         grid-template-columns: repeat(4, calc(25% - 0.375rem));
+    }
+
+    .intextgrid {
+        display: grid;
+        grid-gap: 3rem;
+        grid-template-columns: auto 36rem;
+        grid-template-areas: "first second";
+    }
+
+    .intextgrid.invert {
+        grid-template-columns: 36rem auto;
+        grid-template-areas: "second first";
+    }
+
+    .intextgrid:not(.invert) :nth-child(odd),
+    .intextgrid.invert :nth-child(even) {
+        border-top-right-radius: 0.1rem;
+    }
+    
+    .intextgrid:not(.invert) :nth-child(even),
+    .intextgrid.invert :nth-child(odd) {
+        border-top-left-radius: 0.1rem;
     }
 }
 
