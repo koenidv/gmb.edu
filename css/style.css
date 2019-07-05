@@ -436,6 +436,7 @@ header .searchcontainer .search::placeholder {
     header .navigation {
         list-style-type: none;
         position: absolute;
+        margin-top: 0;
         right: calc(50% + 4em);
     }
 
