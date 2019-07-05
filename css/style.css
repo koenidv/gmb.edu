@@ -1152,13 +1152,17 @@ tr.hover:hover {
         grid-template-areas: "second first";
     }
 
-    .intextgrid:not(.invert) :nth-child(odd),
-    .intextgrid.invert :nth-child(even) {
+    .intextgrid:not(.invert)>:nth-child(odd),
+    .intextgrid:not(.invert)>:nth-child(odd) img,
+    .intextgrid.invert>:nth-child(even),
+    .intextgrid.invert>:nth-child(even) img {
         border-top-right-radius: 0.1rem;
     }
     
-    .intextgrid:not(.invert) :nth-child(even),
-    .intextgrid.invert :nth-child(odd) {
+    .intextgrid:not(.invert)>:nth-child(even),
+    .intextgrid:not(.invert)>:nth-child(even) img,
+    .intextgrid.invert>:nth-child(odd),
+    .intextgrid.invert>:nth-child(odd) img {
         border-top-left-radius: 0.1rem;
     }
 }

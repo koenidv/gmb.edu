@@ -1,0 +1,70 @@
+---
+layout: default
+class: sz
+title: Schülerzeitung
+---
+
+<div class="sidebar">
+    <h3 class="sub">Schülerzeitung</h3>
+    <ul class="simple">
+        <li><a href="#">
+                Das Mosbacher Megaphon
+            </a></li>
+        <li><a href="#kontakt">
+                Kontakt
+            </a></li>
+    </ul>
+    <ul class="simple smallmargin">
+            <h4>Verknüpft</h4>
+            <li><a href="/aktuelles">
+                    Aktuelles
+                </a></li>
+            <li><a href="/unterricht/wu">
+                    Wahlunterricht & AGs
+                </a></li>
+            <li><a href="/unterricht/wu/homepage">
+                    Homepage-AG
+                </a></li>
+        </ul>
+        {% include similiar.html %}
+</div>
+
+<div class="content">
+    <section class="intextgrid">
+        <div>
+            <h2>Das Mosbacher Megaphon</h2>
+            <p>
+                Wer weiß schon, was tagtäglich in unserer Schule so alles passiert. Dafür gibt es uns, Eure
+                Schülerzeitung. Die rasenden Reporter des Mosbacher Megaphons sind für Euch unterwegs und halten Euch
+                auf dem Laufenden. In Zusammenarbeit mit der Homepage-AG gibt es das Allerneueste vom Mosbacher Berg
+                jetzt immer aktuell hier auf der Homepage und seit Januar 2017 auch in Papierform.
+            </p>
+            <p>
+                Weil wir aber nicht immer überall sein können, brauchen wir Euch! Wenn es Themen gibt, die Ihr für
+                wichtig
+                haltet, sprecht uns an, wir berichten darüber. Neue Mitarbeiterinnen und Mitarbeiter, freie Autorinnen
+                und
+                Autoren sind natürlich jederzeit herzlich willkommen. Wir treffen uns jeden Donnerstag von 13:30 Uhr bis
+                15:45 Uhr in A 14. Schaut einfach mal ganz unverbindlich bei uns vorbei.
+                Die Redaktion des Mosbacher Megaphons wird wie auch die Homepage-AG betreut von Herrn Jarzina.
+            </p>
+        </div>
+        <div>
+            <img src="https://mosbacher-berg.de/sites/mosbacher-berg.de/files/styles/medium/public/Sch%C3%BClerzeitungslogo.jpg?itok=DrKv9E_x"
+                alt="Logo des Mosbacher Megaphon">
+            <img src="https://mosbacher-berg.de/sites/mosbacher-berg.de/files/styles/medium/public/wtf%20am%20i%20doing%20here.jpg?itok=yVFELj_o"
+                alt="Redakteure der Schülerzeitung bei der Arbeit">
+        </div>
+    </section>
+
+    <section class="intextgrid" id="kontakt">
+        <div>
+            <h2>Die Schülerzeitung kontaktieren</h2>
+            {% include contactbox.html addressee="schuelerzeitung" %}
+        </div>
+        <div class="box">
+            <h4>Kontakt per E-Mail: <a
+                    href="mailto:schuelerzeitung@mosbacher-berg.de">schuelerzeitung@mosbacher-berg.de</a></h4>
+        </div>
+    </section>
+</div>

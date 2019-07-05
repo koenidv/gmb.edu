@@ -5,7 +5,7 @@
   {% capture title %}
   {% if page.class == "teacher" %}
   {{ page.prefix }} {{ page.lastname }}
-  {% else if page.class == "class" %}
+  {% elsif page.class == "class" %}
   Klasse {{ page.name }}
   {% else %}
   {{ page.title }}
