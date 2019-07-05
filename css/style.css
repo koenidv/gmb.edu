@@ -40,7 +40,8 @@ body {
 
 p,
 a,
-span {
+span,
+li {
     font-family: "Montserrat", sans-serif;
 }
 
@@ -71,6 +72,7 @@ h3 {
 
 h4 {
     margin-top: 0;
+    margin-bottom: 0.5rem;
     font-size: 1.3em;
 }
 
@@ -131,6 +133,11 @@ a,
 a:hover,
 .a:hover {
     text-decoration: underline;
+}
+
+i.material-icons-round {
+    line-height: 1.2rem;
+    vertical-align: text-bottom;
 }
 
 section {
