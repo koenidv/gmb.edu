@@ -3,10 +3,10 @@ ismajor: true
 isintense: true
 perlevel:
 - level: Klasse 5
-  hours: 5
+  hours: 4
   school_curriculum: https://mosbacher-berg.de/sites/mosbacher-berg.de/files/binaries/FC%20Mathematik%205%20neu.pdf
 - level: Klasse 6
-  hours: 5
+  hours: 4
   school_curriculum: https://mosbacher-berg.de/sites/mosbacher-berg.de/files/binaries/FC%20Mathematik%206%20neu.pdf
 - level: Klasse 7
   hours: 4
@@ -18,12 +18,12 @@ perlevel:
   hours: 4
   school_curriculum: https://mosbacher-berg.de/sites/mosbacher-berg.de/files/binaries/FC%20Mathe%209_0.pdf
 - level: Klasse 10
-  hours: 3
+  hours: 4
 - level: E-Phase
-  hours: 3
+  hours: 4?
 - level: Q-Phase
   hours_intense: 5
-  hours_basic: 3
+  hours_basic: 4?
 core_curricula:
 - level: Sekundarstufe 1
   core_curriculum: https://kultusministerium.hessen.de/sites/default/files/media/kerncurriculum_mathematik_gymnasium.pdf

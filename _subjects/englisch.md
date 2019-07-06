@@ -3,10 +3,10 @@ ismajor: true
 isintense: true
 perlevel:
 - level: Klasse 5
-  hours: 5
+  hours: 6
   school_curriculum: https://mosbacher-berg.de/sites/mosbacher-berg.de/files/binaries/Fachcurriculum%20Englisch_Klasse%205.pdf
 - level: Klasse 6
-  hours: 5
+  hours: 4
   school_curriculum: https://mosbacher-berg.de/sites/mosbacher-berg.de/files/binaries/FC%20Englisch%206.pdf
 - level: Klasse 7
   hours: 4
@@ -15,15 +15,15 @@ perlevel:
   hours: 4
   school_curriculum: https://mosbacher-berg.de/sites/mosbacher-berg.de/files/binaries/FC%20Englisch%208%20final%20version.pdf
 - level: Klasse 9
-  hours: 4
+  hours: 3
   school_curriculum: https://mosbacher-berg.de/sites/mosbacher-berg.de/files/binaries/FC%20Englisch%209_0.pdf
 - level: Klasse 10
   hours: 3
 - level: E-Phase
-  hours: 3
+  hours: 3?
 - level: Q-Phase
   hours_intense: 5
-  hours_basic: 3
+  hours_basic: 3?
 core_curricula:
 - level: Sekundarstufe 1
   core_curriculum: https://kultusministerium.hessen.de/sites/default/files/media/hkm/kerncurriculum_moderne_fremdsprachen_gymnasialer_bildungsgang_sekundarstufe_i.pdf
