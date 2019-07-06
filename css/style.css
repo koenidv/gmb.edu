@@ -117,6 +117,11 @@ ul:not(.simple) {
     text-align: left;
 }
 
+.navigation ul,
+ul.navigation {
+    text-align: center;
+}
+
 @media (min-width: 74rem) {
     ul.sublist {
         margin-left: 1.5rem;
@@ -135,7 +140,7 @@ a:hover,
     text-decoration: underline;
 }
 
-i.material-icons-round {
+:not(.menutoggler)>i.material-icons-round {
     line-height: 1.2rem;
     vertical-align: text-bottom;
 }
