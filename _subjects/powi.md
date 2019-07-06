@@ -2,7 +2,8 @@
 title: Politik & Wirtschaft
 ismajor: false
 isintense: true
-perlevel:
+color: 905694
+perlevel: 
 - level: Klasse 7
   hours: 2
   school_curriculum: https://mosbacher-berg.de/sites/mosbacher-berg.de/files/binaries/FC%207%20Politik%20und%20Wirtschaft.pdf

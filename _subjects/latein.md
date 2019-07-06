@@ -1,6 +1,7 @@
 ---
 ismajor: true
 isintense: false
+color: 4f595c
 perlevel:
 - level: Klasse 6
   hours: 3

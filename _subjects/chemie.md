@@ -1,6 +1,7 @@
 ---
 ismajor: false
 isintense: true
+color: c3a0d2
 perlevel:
 - level: Klasse 8
   hours: 2

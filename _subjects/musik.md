@@ -1,6 +1,7 @@
 ---
 ismajor: false
 isintense: true
+color: ffc107
 perlevel:
 - level: Klasse 5
   hours: 2

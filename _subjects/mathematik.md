@@ -1,7 +1,8 @@
 ---
 ismajor: true
 isintense: true
-perlevel:
+color: 1286b2
+perlevel: 
 - level: Klasse 5
   hours: 4
   school_curriculum: https://mosbacher-berg.de/sites/mosbacher-berg.de/files/binaries/FC%20Mathematik%205%20neu.pdf

@@ -1,0 +1,38 @@
+---
+layout: default
+title: Fächer
+class: subjects
+---
+
+<div class="sidebar">
+    <h3 class="sub">Unterrichtsfächer</h3>
+    <a href="/unterricht/schwerpunkte">Unsere Schwerpunkte</a><br>
+    <a href="/unterricht/wu">Wahlunterricht</a><br>
+    <a href="/unterricht/fahrten">Fahrten</a><br>
+    <a href="/unterricht/oberstufe">Oberstufe</a><br>
+
+    <ul class="simple smallmargin">
+        <h5>Alle Fächer</h5>
+        {% for subject in site.subjects  %}
+        <li><a href="{{ subject.url }}">
+                {{ subject.title }}
+            </a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="content">
+    <section>
+        <h2>Am GMB unterrichtete Fächer</h2>
+        <div class="fourgrid">
+            {% for subject in site.subjects  %}
+            <a href="{{ subject.url }}" class="box hover subject" {% if subject.color %}
+                style="border: 1px solid #{{ subject.color }};" {% endif %}>
+                <h5>
+                    {{ subject.title }}
+                </h5>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+</div>

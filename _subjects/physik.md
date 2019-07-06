@@ -1,7 +1,8 @@
 ---
 ismajor: false
 isintense: true
-perlevel:
+color: ce0087
+perlevel: 
 - level: Klasse 7
   hours: 2
   school_curriculum: https://mosbacher-berg.de/sites/mosbacher-berg.de/files/binaries/FC%207%20Physik.pdf

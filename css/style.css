@@ -1028,6 +1028,17 @@ a.nostyle:hover {
     color: #268bd2;
 }
 
+.box.subject {
+    min-height: 4rem;
+    display: table;
+    text-align: center;
+}
+
+.box.subject>* {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 /*
  * Buttons and Search
  */
@@ -1099,6 +1110,13 @@ tr.hover:hover {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: auto auto;
+}
+
+.fourgrid {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(2, calc(50% - 0.25rem));
+    padding: 0 0.1rem;
 }
 
 

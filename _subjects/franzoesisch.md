@@ -2,6 +2,7 @@
 title: Französisch
 ismajor: true
 isintense: true
+color: f4ae9c
 perlevel:
 - level: Klasse 6
   hours: 3
