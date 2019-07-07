@@ -24,7 +24,7 @@ perlevel:
   hours_intense: 5
   hours_basic: 3?
 core_curricula:
-- level: Sekundarstufe 1
+- level: Sekundarstufe 1 (Moderne Fremdsprachen)
   core_curriculum: https://kultusministerium.hessen.de/sites/default/files/media/hkm/kerncurriculum_moderne_fremdsprachen_gymnasialer_bildungsgang_sekundarstufe_i.pdf
 - level: Sekundarstufe 2
   core_curriculum: https://kultusministerium.hessen.de/sites/default/files/media/07.18.18_kcgo_fra.pdf

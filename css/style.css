@@ -117,9 +117,11 @@ ul:not(.simple) {
     text-align: left;
 }
 
-.navigation ul,
-ul.navigation {
-    text-align: center;
+@media (max-width: 74rem) {
+    .navigation ul,
+    ul.navigation {
+        text-align: center;
+    }
 }
 
 @media (min-width: 74rem) {
@@ -782,7 +784,8 @@ header .searchcontainer .search::placeholder {
 @media (min-width: 56rem) {
 
     .blog .content,
-    .post .content {
+    .post .content,
+    .subject .content {
         padding-right: 24rem;
     }
 }
@@ -790,7 +793,8 @@ header .searchcontainer .search::placeholder {
 @media (min-width: 88rem) {
 
     .blog .content,
-    .post .content {
+    .post .content,
+    .subject .content {
         padding-right: 36rem;
     }
 }
@@ -1153,7 +1157,7 @@ tr.hover:hover {
     }
 
     .intextgrid.mobileinvert {
-        grid-template-areas: "first" "second";
+        grid-template-areas: "first""second";
     }
 }
 
@@ -1182,7 +1186,7 @@ tr.hover:hover {
     .intextgrid.invert>:nth-child(even) img {
         border-top-right-radius: 0.1rem;
     }
-    
+
     .intextgrid:not(.invert)>:nth-child(even),
     .intextgrid:not(.invert)>:nth-child(even) img,
     .intextgrid.invert>:nth-child(odd),

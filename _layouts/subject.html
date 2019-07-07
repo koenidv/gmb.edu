@@ -5,10 +5,28 @@ class: class
 
 <div class="sidebar">
     <h3 class="sub">{% if page.ismajor %}Hauptfach{% else %}Fach{% endif %}</h3>
-    <a href="/unterricht/schwerpunkte">Unsere Schwerpunkte</a><br>
-    <a href="/unterricht/wu">Wahlunterricht</a><br>
-    <a href="/unterricht/fahrten">Fahrten</a><br>
-    <a href="/unterricht/oberstufe">Oberstufe</a><br>
+
+    <ul class="simple">
+        <li><a href="#">
+                Übersicht
+            </a></li>
+        {% for item in page.index %}
+        <li><a href="#{{ item.ref }}">
+                {{ item.title }}
+            </a></li>
+        {% endfor %}
+        <li><a href="#infos">
+                Informationen
+            </a></li>
+    </ul>
+
+    <ul class="simple smallmargin">
+        <h5>Verknüpft</h5>
+        <li><a href="/unterricht/schwerpunkte">Unsere Schwerpunkte</a><br></li>
+        <li><a href="/unterricht/wu">Wahlunterricht</a><br></li>
+        <li><a href="/unterricht/fahrten">Fahrten</a><br></li>
+        <li><a href="/unterricht/oberstufe">Oberstufe</a><br></li>
+    </ul>
 
     <ul class="simple smallmargin">
         <h5>Andere Fächer</h5>
@@ -70,7 +88,7 @@ class: class
         {% endif %}
         {% endif %}
         {% endcapture %}
-        <h5>{{ description }}</h5>
+        <h5 id="infos">{{ description }}</h5>
         <div class="subjectinfogrid">
             <div class="weeklyhours">
                 <h4>Wochenstunden:</h4>
