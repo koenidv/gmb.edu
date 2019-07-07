@@ -22,10 +22,40 @@ class: subjects
 </div>
 
 <div class="content">
+
+    <section id="verein" class="intextgrid">
+        <div>
+            <h2>Fächer</h2>
+            <p>An unserem Gymnasium wird Englisch als erste Fremdsprache ab der Klasse 5 unterrichtet. Als zweite
+                Fremdsprache werden Französisch oder Latein ab der Jahrgangsstufe 6 angeboten. Der bilinguale Unterricht
+                findet ab der Jahrgangsstufe 7 statt. Wahlunterricht wird ab der Klasse 8 erteilt; es können auch AGs
+                als WU angerechnet werden. Unser umfangreiches Leistungskursangebot finden Sie hier.
+            </p>
+            <p>
+                Die Lehrpläne wurden hessenweit durch das stärker kompetenzorientierte neue Kerncurriculum ersetzt, das
+                auf Grundlage der nationalen Bildungsstandards erstellt wurde. Derzeit erarbeiten wir hierzu an der
+                Schule ein Schulcurriculum, in das alle Fächer mit ihren Fachcurricula münden werden. Erste Ergebnisse
+                werden wir bald im jeweiligen Anhang der Fächer veröffentlichen.
+            </p>
+        </div>
+        <img src="https://mosbacher-berg.de/sites/mosbacher-berg.de/files/styles/medium/public/chemieexperimente2_0550.jpg"
+            alt="Schülerexperimente">
+    </section>
+
     <section>
         <h2>Am GMB unterrichtete Fächer</h2>
         <div class="fourgrid">
-            {% for subject in site.subjects  %}
+            {% assign majorsubjects=site.subjects | where: "ismajor", true %}
+            {% for subject in majorsubjects %}
+            <a href="{{ subject.url }}" class="box hover subject" {% if subject.color %}
+                style="border: 1px solid #{{ subject.color }};" {% endif %}>
+                <h5>
+                    {{ subject.title }}
+                </h5>
+            </a>
+            {% endfor %}
+            {% assign subjects=site.subjects | where: "ismajor", false %}
+            {% for subject in subjects %}
             <a href="{{ subject.url }}" class="box hover subject" {% if subject.color %}
                 style="border: 1px solid #{{ subject.color }};" {% endif %}>
                 <h5>
