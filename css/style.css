@@ -153,13 +153,20 @@ section {
 }
 
 section:not(:first-of-type) {
-    margin-top: 2em;
+    margin-top: 4rem;
 }
 
 @media (max-width: 74rem) {
     section {
         margin-bottom: 3em;
     }
+}
+
+.fullwidthimage {
+    width: 100%;
+    height: 22rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
 }
 
 hr {
@@ -767,7 +774,7 @@ header .searchcontainer .search::placeholder {
 
     .content {
         box-shadow: 0 0 10px #dadada;
-        padding: 3rem 2rem 2rem 4rem;
+        padding: 3rem 2rem 2rem 3rem;
         min-height: calc(100vh - 14em);
         border-top-left-radius: 1em;
     }
@@ -1176,6 +1183,11 @@ tr.hover:hover {
 }
 
 @media (min-width: 74rem) {
+.intextgrid {
+    grid-template-columns: auto 24rem;
+    grid-template-areas: "first second";
+}
+
     .intextgrid.wide {
         grid-template-areas: "first second";
         grid-template-columns: auto 30rem;
@@ -1223,6 +1235,15 @@ tr.hover:hover {
     .intextgrid.invert>:nth-child(odd),
     .intextgrid.invert>:nth-child(odd) img {
         border-top-left-radius: 0.1rem;
+    }
+
+    .intextgrid img:not(:first-of-type) {
+        border-top-right-radius: 0.25rem !important;
+        border-top-left-radius: 0.25rem !important;
+    }
+    .intextgrid img:not(:last-of-type) {
+        border-bottom-left-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
     }
 }
 
