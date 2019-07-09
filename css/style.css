@@ -156,6 +156,10 @@ section:not(:first-of-type) {
     margin-top: 4rem;
 }
 
+section.smalltop {
+    margin-top: 1rem;
+}
+
 @media (max-width: 74rem) {
     section {
         margin-bottom: 3em;
