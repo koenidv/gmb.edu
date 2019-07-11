@@ -108,10 +108,7 @@ h5 {
 
 ul.simple {
     list-style: none;
-}
-
-ul.smallmargin {
-    margin-top: 1rem !important;
+    margin-top: 1rem;
 }
 
 ul:not(.simple) {
@@ -119,6 +116,7 @@ ul:not(.simple) {
 }
 
 @media (max-width: 74rem) {
+
     .navigation ul,
     ul.navigation {
         text-align: center;
@@ -461,7 +459,7 @@ header .searchcontainer .search::placeholder {
 
     ul.navigation>li {
         float: left;
-        padding: 1em;
+        padding: 1rem 0.5rem;
         height: 5em;
         display: table;
         position: relative;
@@ -499,6 +497,12 @@ header .searchcontainer .search::placeholder {
         background-color: white;
         box-shadow: 0 0 10px #dadada;
         border-radius: 0.75em;
+    }
+
+    @media (min-width: 88rem) {
+        ul.navigation>li {
+            padding: 1rem;
+        }
     }
 
     @media (max-width: 80rem) {
@@ -750,10 +754,6 @@ header .searchcontainer .search::placeholder {
 .sidebar ul {
     padding-left: 0;
     padding-bottom: 1em;
-}
-
-.sidebar ul:not(:first-of-type) {
-    margin-top: 3em;
 }
 
 @media (max-width: 74rem) {
@@ -1151,23 +1151,29 @@ tr.hover:hover {
 }
 
 
-.intextgrid {
+.intextgrid,
+section:not([class$="grid"]) {
     display: grid;
     grid-gap: 1rem;
     grid-template-areas: "second""first";
 }
 
-.intextgrid :nth-child(odd) {
+.intextgrid :nth-child(odd),
+section:not([class$="grid"]) :nth-child(odd) {
     grid-area: first;
 }
 
-.intextgrid :nth-child(even) {
+.intextgrid :nth-child(even),
+section:not([class$="grid"]) :nth-child(even) {
     grid-area: second;
 }
 
 .intextgrid img,
 .intextgrid iframe,
-.intextgrid embed {
+.intextgrid embed,
+section:not([class$="grid"]) img,
+section:not([class$="grid"]) iframe,
+section:not([class$="grid"]) embed {
     border-radius: 0.75rem;
     width: 100%;
     max-height: 22rem;
@@ -1176,29 +1182,36 @@ tr.hover:hover {
 }
 
 @media (max-width: 74rem) {
-    
-    .intextgrid>* {
+
+    .intextgrid>*,
+    section:not([class$="grid"])>* {
         max-width: 100%;
     }
 
-    .intextgrid.mobileinvert {
+    .intextgrid.mobileinvert,
+    section:not([class$="grid"]).mobileinvert {
         grid-template-areas: "first""second";
     }
 }
 
 @media (min-width: 74rem) {
-.intextgrid {
-    grid-template-columns: auto 24rem;
-    grid-template-areas: "first second";
-}
 
-    .intextgrid.wide {
+    .intextgrid,
+    section:not([class$="grid"]) {
+        grid-template-columns: auto 24rem;
+        grid-template-areas: "first second";
+    }
+
+    .intextgrid.wide,
+    section:not([class$="grid"]).wide {
         grid-template-areas: "first second";
         grid-template-columns: auto 30rem;
     }
 
     .intextgrid iframe,
-    .intextgrid embed {
+    .intextgrid embed,
+    section:not([class$="grid"]) iframe,
+    section:not([class$="grid"]) embed {
         min-height: 32rem;
         max-height: 100%;
     }
@@ -1211,41 +1224,55 @@ tr.hover:hover {
         grid-template-columns: repeat(4, calc(25% - 0.375rem));
     }
 
-    .intextgrid {
+    .intextgrid,
+    section:not([class$="grid"]) {
         display: grid;
         grid-gap: 3rem;
         grid-template-columns: auto 36rem;
         grid-template-areas: "first second";
     }
 
-    .intextgrid.invert {
+    .intextgrid.invert,
+    section:not([class$="grid"]).invert {
         grid-template-columns: 36rem auto;
         grid-template-areas: "second first";
     }
 
-    .intextgrid.wide {
+    .intextgrid.wide,
+    section:not([class$="grid"]).wide {
         grid-template-columns: auto 48rem;
     }
 
     .intextgrid:not(.invert)>:nth-child(odd),
     .intextgrid:not(.invert)>:nth-child(odd) img,
+    section:not([class$="grid"]):not(.invert)>:nth-child(odd),
+    section:not([class$="grid"]):not(.invert)>:nth-child(odd) img,
     .intextgrid.invert>:nth-child(even),
-    .intextgrid.invert>:nth-child(even) img {
+    .intextgrid.invert>:nth-child(even) img,
+    section:not([class$="grid"]).invert>:nth-child(even),
+    section:not([class$="grid"]).invert>:nth-child(even) img {
         border-top-right-radius: 0.1rem;
     }
 
     .intextgrid:not(.invert)>:nth-child(even),
     .intextgrid:not(.invert)>:nth-child(even) img,
+    section:not([class$="grid"]):not(.invert)>:nth-child(even),
+    section:not([class$="grid"]):not(.invert)>:nth-child(even) img,
     .intextgrid.invert>:nth-child(odd),
-    .intextgrid.invert>:nth-child(odd) img {
+    .intextgrid.invert>:nth-child(odd) img,
+    section:not([class$="grid"]).invert>:nth-child(odd),
+    section:not([class$="grid"]).invert>:nth-child(odd) img {
         border-top-left-radius: 0.1rem;
     }
 
-    .intextgrid img:not(:first-of-type) {
+    .intextgrid img:not(:first-of-type),
+    section:not([class$="grid"]) img:not(:first-of-type) {
         border-top-right-radius: 0.25rem !important;
         border-top-left-radius: 0.25rem !important;
     }
-    .intextgrid img:not(:last-of-type) {
+
+    .intextgrid img:not(:last-of-type),
+    section:not([class$="grid"]) img:not(:last-of-type) {
         border-bottom-left-radius: 0.25rem;
         border-bottom-right-radius: 0.25rem;
     }
@@ -1276,6 +1303,7 @@ tr.hover:hover {
     .imggrid {
         grid-template-columns: repeat(4, calc(25% - 0.375rem))
     }
+
     .imggrid>*:nth-child(odd):last-child {
         width: unset;
         height: 16rem;
