@@ -459,7 +459,7 @@ header .searchcontainer .search::placeholder {
 
     ul.navigation>li {
         float: left;
-        padding: 1rem 0.5rem;
+        padding: 1rem;
         height: 5em;
         display: table;
         position: relative;
@@ -497,15 +497,16 @@ header .searchcontainer .search::placeholder {
         background-color: white;
         box-shadow: 0 0 10px #dadada;
         border-radius: 0.75em;
-    }
-
-    @media (min-width: 88rem) {
-        ul.navigation>li {
-            padding: 1rem;
-        }
+        transform: scale(0.85) translateY(-1rem);
+        opacity: 0;
+        transition: 150ms ease-in;
     }
 
     @media (max-width: 80rem) {
+        ul.navigation>li {
+            padding: 1rem 0.5rem;
+        }
+
         li:first-child>ul.sub-navigation {
             left: 0rem;
         }
@@ -543,6 +544,9 @@ header .searchcontainer .search::placeholder {
     li:hover ul.sub-navigation,
     li.active ul.sub-navigation {
         visibility: visible;
+        transform: scale(1) translateY(0);
+        opacity: 1;
+        transition: 250ms ease-out;
     }
 
     ul.sub-navigation li:hover>a {
@@ -767,6 +771,14 @@ header .searchcontainer .search::placeholder {
     padding: 1em 1em;
     overflow: hidden;
     grid-area: content;
+}
+
+.content>* {
+    transition: transform 100ms;
+}
+
+.transition .content>* {
+    transform: translateY(8rem);
 }
 
 @media (min-width: 74rem) {
