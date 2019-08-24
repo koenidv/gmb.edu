@@ -6,6 +6,7 @@ subjects:
 - Deutsch
 - Geschichte
 - Englisch
+short: mg?
 duty:
 - Schulleiter
 - Fachschaftssprecher

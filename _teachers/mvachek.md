@@ -1,14 +1,15 @@
 ---
 prefix: Hr.
-firstname: J.
-lastname: Weidauer
+firstname: M.
+lastname: Vachek
 subjects:
-- Latein
+- Englisch
 - Geschichte
 - Bilingualer Fachunterricht
-short: wdr
-duty: ''
-time: Donnerstag, 2. Stunde
+short: vac
+duty:
+- Fachschaftssprecher
+time: Mittwoch, 6. Stunde
 room:
 email: ''
 ---

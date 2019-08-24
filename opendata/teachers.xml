@@ -1,0 +1,18 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<teachers>
+{% for teacher in site.teachers %}
+    <item>
+        <name>{{ teacher.firstname }} {{ teacher.lastname }}</name>
+        <short>{{ teacher.short }}</short>
+        <id>{{ teacher.title }}</id>
+        <subjects>
+            {% for subject in teacher.subjects %}
+            <item>{{ subject }}</item>
+            {% endfor %}
+        </subjects>
+    </item>
+{% endfor %}
+</teachers>

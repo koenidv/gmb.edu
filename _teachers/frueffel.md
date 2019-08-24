@@ -5,6 +5,7 @@ lastname: Rüffel
 subjects:
 - Mathematik
 - Erdkunde
+short: rue
 duty:
 - Fachschaftssprecher
 - Personalrat
