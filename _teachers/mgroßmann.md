@@ -1,5 +1,5 @@
 ---
-prefix: Hr.
+prefix: Fr.
 firstname: M.
 lastname: Großmann
 subjects:

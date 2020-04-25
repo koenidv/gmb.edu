@@ -36,6 +36,9 @@ collections:
   subjects:
     output: true
     permalink: /unterricht/faecher/:title
+  galleries:
+    ouptut: true
+    permalink: /impressionen
 
 
 defaults:
@@ -62,6 +65,12 @@ defaults:
     values:
       layout: "subject"
       class: "subject"
+  - scope:
+      path: ""
+      type: "galleries"
+    values:
+      layout: "gallery"
+      class: "gallery"
 
 # Build settings
 markdown: kramdown
